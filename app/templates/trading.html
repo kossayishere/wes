@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Trading Spot
+{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/wallet.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/trading.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="upper"> 
+        <div class="left">
+            <div id="values_table">
+                <div class="head">
+                    <div class="currency">Currency</div>
+                    <div class="last">Last</div>
+                    <div class="change">Change</div>
+                </div>
+            </div>
+            <div class="trades">
+                <div class="title">
+                    <span>Trades</span>
+                </div>
+                <div id="trades_head">
+                </div>
+                <div id="inner_trades">
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="infos"></div>
+            <div class="chart">
+                <div id="inner_chart"></div>
+                <div id="chart_data" style="display: none;"></div>
+            </div>
+            <div class="actions">
+                <div class="left_action">
+                    <div class="available">
+                        Available
+                        <span id="available_of_usdt">
+                            {% if sum_usdt != 0 %}
+                                {{sum_usdt}}
+                            {% else %}
+                                0.00
+                            {% endif %}
+                        </span>
+                        <span class="coin_one">USDT</span>
+                    </div>
+                    <div class="market_price">Market Price</div>
+                    <div class="amount">
+                        <input id="buy_amount" type="text" placeholder="Amount">
+                        <span class="prefix">USDT</span>
+                    </div>
+                    <div class="amount_get">
+                        Get per purchase:&nbsp;
+                        <span id="get_of_coin">0.000000</span>&nbsp;
+                        <span class="coin_two">
+                            {% if coin_name %} {{coin_name}} {% endif %}
+                        </span>
+                    </div>
+                    <div class="action_btn">
+                        {% if coin_name %}  
+                            <input class="sell_buy_btn" id="buy_btn" type="button" value="Buy {{coin_name}}">
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="right_action">
+                    <div class="available">
+                        Available
+                        <span id="available_of_coin">
+                            {% if sum_coin != 0 %}
+                                {{sum_coin}}
+                            {% else %}
+                                0.00
+                            {% endif %}
+                        </span>
+                        <span id="the_coin">
+                            {% if coin_name %} {{coin_name}} {% endif %}
+                        </span>
+                    </div>
+                    <div class="market_price">Market Price</div>
+                    <div class="amount">
+                        <input id="sell_amount" type="text" placeholder="Amount">
+                        <span class="prefix">
+                            {% if coin_name %} {{coin_name}} {% endif %}
+                        </span>
+                    </div>
+                    <div class="amount_get">
+                        Get per sale:&nbsp;
+                        <span id="get_of_usdt">0.000000</span>&nbsp;
+                        <span class="coin_two">USDT</span>
+                    </div>
+                    <div class="action_btn">
+                        {% if coin_name %}  
+                            <input class="sell_buy_btn" id="sell_btn" type="button" value="Sell {{coin_name}}">
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="under">
+        <div class="table">
+            <div id="titles">
+                <div id="th_Date">Date</div>
+                <div id="th_Pair">Pair</div>
+                <div id="th_Type">Type</div>
+                <div id="th_Amount">Amount</div>
+                <div id="th_Status">Status</div>
+            </div>
+            <div id="inner_table">
+                {% if table %}
+                    {% for i in table %}
+                        <div class="t_row">
+                            <div> 0 </div>
+                            <div> {{ i['coin'] }}/USDT </div>
+                            <div>
+                                {% if i['type'] == 1 %}
+                                    Sell
+                                {% else %}
+                                    Buy
+                                {% endif %}
+                            </div>
+                            <div> {{ i['amount'] }}  </div>
+                            <div> Done </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <span id="No_open_orders">No open orders</span>
+                {% endif %}
+            </div> 
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script
+    type="text/javascript"
+    src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"
+    ></script>
+    <script type="module" src="{{ url_for('static', filename='/js/trading.js') }}"></script>
+{% endblock %}

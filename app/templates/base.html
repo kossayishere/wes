@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            {% block title %}
+            {% endblock %}
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/error.css') }}">
+        {% endblock %}
+</head>
+<body>
+    <div id="content_wrapper">
+        <div id="vip_page" >
+            <div class="inner_vip">
+                <div class="left">
+                    <svg height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                        viewBox="0 0 511.147 511.147" xml:space="preserve">
+                        <g transform="translate(1 1)">
+                            <g>
+                                <path style="fill:#FFE100;" d="M134.253,312.173c-14.507-14.507-26.453-32.427-34.987-51.2l-57.173,189.44
+                                    c-3.413,11.093,9.387,19.627,18.773,12.8l55.467-38.4c13.653-9.387,32.427-4.267,38.4,11.093l23.04,56.32
+                                    c5.12,11.947,23.04,11.093,26.453-0.853l38.4-126.293C199.96,362.52,161.56,342.04,134.253,312.173"/>
+                                <path style="fill:#FFE100;" d="M49.773,7.533c0,18.773-15.36,34.133-34.133,34.133c18.773,0,34.133,15.36,34.133,34.133
+                                    c0-18.773,15.36-34.133,34.133-34.133C65.133,41.667,49.773,26.307,49.773,7.533"/>
+                                <path style="fill:#FFE100;" d="M41.24,229.4c0,5.12-3.413,8.533-8.533,8.533s-8.533-3.413-8.533-8.533
+                                    c0-5.12,3.413-8.533,8.533-8.533S41.24,224.28,41.24,229.4"/>
+                                <path style="fill:#FFE100;" d="M476.44,178.2c-5.12,0-8.533-3.413-8.533-8.533v-34.133c0-5.12,3.413-8.533,8.533-8.533
+                                    s8.533,3.413,8.533,8.533v34.133C484.973,174.787,481.56,178.2,476.44,178.2z"/>
+                                <path style="fill:#FFE100;" d="M493.507,161.133h-34.133c-5.12,0-8.533-3.413-8.533-8.533c0-5.12,3.413-8.533,8.533-8.533h34.133
+                                    c5.12,0,8.533,3.413,8.533,8.533C502.04,157.72,498.627,161.133,493.507,161.133z"/>
+                                <path style="fill:#FFE100;" d="M416.707,203.8c0,89.6-72.533,162.133-162.133,162.133S92.44,293.4,92.44,203.8
+                                    S164.973,41.667,254.573,41.667S416.707,114.2,416.707,203.8"/>
+                                <path style="fill:#FFE100;" d="M409.88,260.973c-8.533,21.333-22.187,40.107-39.253,56.32
+                                    c-26.453,27.307-63.147,45.227-103.253,48.64l38.4,125.44c3.413,12.8,21.333,12.8,26.453,0.853l23.04-56.32
+                                    c5.973-14.507,24.747-20.48,38.4-11.093l55.467,38.4c9.387,6.827,22.187-1.707,18.773-12.8L409.88,260.973z"/>
+                            </g>
+                            <g>
+                                <path style="fill:#FFA800;" d="M258.84,44.227c-4.267,0-8.533,0-12.8,0.853c83.627,6.827,149.333,75.947,149.333,161.28
+                                    S329.667,360.813,246.04,367.64c4.267,0,8.533,0.853,12.8,0.853c89.6,0,162.133-72.533,162.133-162.133
+                                    S348.44,44.227,258.84,44.227"/>
+                                <path style="fill:#FFA800;" d="M472.173,452.973l-58.027-189.44c-4.267,10.24-10.24,20.48-16.213,29.867l48.64,159.573
+                                    c0.853,2.56,0.853,5.973-0.853,7.68l6.827,5.12C462.787,472.6,475.587,464.067,472.173,452.973"/>
+                            </g>
+                            <g>
+                                <path style="fill:#FFFFFF;" d="M254.573,41.667c4.267,0,8.533,0,12.8,0.853C183.747,48.493,118.04,118.467,118.04,203.8
+                                    s65.707,155.307,149.333,161.28c-4.267,0.853-8.533,0.853-12.8,0.853c-89.6,0-162.133-72.533-162.133-162.133
+                                    S164.973,41.667,254.573,41.667"/>
+                                <path style="fill:#FFFFFF;" d="M42.093,450.413l57.173-189.44c4.267,10.24,10.24,20.48,16.213,29.867L67.693,450.413
+                                    c-0.853,3.413-0.853,5.973,0,8.533l-6.827,5.12C51.48,470.04,38.68,461.507,42.093,450.413"/>
+                            </g>
+                            <path style="fill:#00DA6C;" d="M374.04,203.8c0,65.707-53.76,119.467-119.467,119.467S135.107,269.507,135.107,203.8
+                                s53.76-119.467,119.467-119.467S374.04,138.093,374.04,203.8"/>
+                            <path d="M254.573,374.467c-93.867,0-170.667-76.8-170.667-170.667s76.8-170.667,170.667-170.667S425.24,109.933,425.24,203.8
+                                S348.44,374.467,254.573,374.467z M254.573,50.2c-84.48,0-153.6,69.12-153.6,153.6s69.12,153.6,153.6,153.6
+                                s153.6-69.12,153.6-153.6S339.053,50.2,254.573,50.2z"/>
+                            <path d="M318.573,510.147c-10.24,0-18.773-5.973-21.333-16.213l-38.4-126.293c-0.853-2.56,0-5.12,0.853-7.68
+                                c1.707-2.56,3.413-3.413,5.973-3.413c37.547-2.56,71.68-18.773,98.133-46.08c17.067-15.36,29.013-33.28,37.547-52.907
+                                c1.707-3.413,4.267-5.12,8.533-5.12c3.413,0,6.827,2.56,7.68,5.973l57.173,189.44c1.707,5.973,0.853,12.8-3.413,17.92
+                                c-4.267,5.12-10.24,8.533-17.067,8.533l0,0c-4.267,0-8.533-1.707-11.947-3.413l-55.467-38.4c-2.56-1.707-5.973-3.413-10.24-3.413
+                                c-6.827,0-13.653,4.267-15.36,10.24l-21.333,56.32C336.493,504.173,327.96,510.147,318.573,510.147z M278.467,372.76
+                                l34.987,116.053c0.853,3.413,4.267,3.413,5.12,3.413c0.853,0,4.267,0,5.12-3.413l23.04-56.32c5.12-12.8,17.92-20.48,31.573-20.48
+                                c6.827,0,13.653,2.56,19.627,5.973l55.467,38.4c0.853,0.853,1.707,0.853,2.56,0.853l0,0c0.853,0,2.56-0.853,3.413-1.707
+                                c0.853-0.853,0.853-1.707,0-2.56l-51.2-168.96C399.64,298.52,389.4,311.32,376.6,323.267
+                                C350.147,349.72,316.013,367.64,278.467,372.76z"/>
+                            <path d="M190.573,510.147L190.573,510.147c-9.387,0-17.067-5.12-21.333-13.653l-23.04-56.32c-2.56-5.973-8.533-10.24-15.36-10.24
+                                c-3.413,0-6.827,0.853-10.24,3.413l-55.467,38.4c-9.387,6.827-22.187,4.267-29.013-5.12c-3.413-5.12-5.12-11.947-3.413-17.92
+                                l57.173-189.44c2.56-4.267,5.973-6.827,9.387-6.827c3.413,0,6.827,1.707,8.533,5.12c7.68,17.92,18.773,34.133,33.28,48.64
+                                c27.307,29.867,63.147,47.787,102.4,50.347c2.56,0,5.12,1.707,6.827,3.413c1.707,2.56,1.707,5.12,0.853,7.68l-38.4,126.293
+                                C209.347,503.32,200.813,510.147,190.573,510.147z M130.84,412.013c13.653,0,26.453,8.533,31.573,20.48l23.04,56.32
+                                c0.853,2.56,4.267,3.413,5.12,3.413s4.267,0,5.12-3.413L230.68,372.76c-40.107-5.12-75.947-24.747-103.253-54.613
+                                c-10.24-10.24-18.773-21.333-26.453-34.133l-51.2,168.96c0,0.853,0,1.707,0,2.56c0.853,1.707,3.413,2.56,5.973,0.853l55.467-38.4
+                                C117.187,414.573,124.013,412.013,130.84,412.013z"/>
+                            <path d="M49.773,84.333c-5.12,0-8.533-3.413-8.533-8.533c0-14.507-11.093-25.6-25.6-25.6c-5.12,0-8.533-3.413-8.533-8.533
+                                s3.413-8.533,8.533-8.533c14.507,0,25.6-11.093,25.6-25.6C41.24,2.413,44.653-1,49.773-1s8.533,3.413,8.533,8.533
+                                c0,14.507,11.093,25.6,25.6,25.6c5.12,0,8.533,3.413,8.533,8.533S89.027,50.2,83.907,50.2c-14.507,0-25.6,11.093-25.6,25.6
+                                C58.307,80.92,54.893,84.333,49.773,84.333z M41.24,41.667c3.413,2.56,5.973,5.12,8.533,8.533c2.56-3.413,5.12-5.973,8.533-8.533
+                                c-3.413-2.56-5.973-5.12-8.533-8.533C47.213,36.547,44.653,39.107,41.24,41.667z"/>
+                            <path d="M467.907,169.667c-5.12,0-8.533-3.413-8.533-8.533V127c0-5.12,3.413-8.533,8.533-8.533c5.12,0,8.533,3.413,8.533,8.533
+                                v34.133C476.44,166.253,473.027,169.667,467.907,169.667z"/>
+                            <path d="M484.973,152.6H450.84c-5.12,0-8.533-3.413-8.533-8.533c0-5.12,3.413-8.533,8.533-8.533h34.133
+                                c5.12,0,8.533,3.413,8.533,8.533C493.507,149.187,490.093,152.6,484.973,152.6z"/>
+                            <path d="M32.707,220.867c0,5.12-3.413,8.533-8.533,8.533s-8.533-3.413-8.533-8.533c0-5.12,3.413-8.533,8.533-8.533
+                                S32.707,215.747,32.707,220.867"/>
+                            <path d="M254.573,331.8c-70.827,0-128-57.173-128-128s57.173-128,128-128s128,57.173,128,128S325.4,331.8,254.573,331.8z
+                                    M254.573,92.867c-61.44,0-110.933,49.493-110.933,110.933s49.493,110.933,110.933,110.933S365.507,265.24,365.507,203.8
+                                S316.013,92.867,254.573,92.867z"/>
+                            <path d="M254.573,272.92c-23.893,0-42.667-18.773-42.667-42.667c0-5.12,3.413-8.533,8.533-8.533s8.533,3.413,8.533,8.533
+                                c0,14.507,11.093,25.6,25.6,25.6c7.68,0,14.507-3.413,19.627-9.387c2.56-2.56,3.413-5.973,2.56-9.387
+                                c0-3.413-2.56-6.827-5.12-9.387l-44.373-34.987c-6.827-5.12-11.093-12.8-11.947-21.333c-0.853-8.533,1.707-16.213,6.827-22.187
+                                c8.533-9.387,19.627-15.36,32.427-15.36c23.893,0,42.667,18.773,42.667,42.667c0,5.12-3.413,8.533-8.533,8.533
+                                s-8.533-3.413-8.533-8.533c0-14.507-11.093-25.6-25.6-25.6c-7.68,0-14.507,3.413-19.627,9.387c-2.56,2.56-3.413,5.973-2.56,9.387
+                                c0,3.413,2.56,6.827,5.12,9.387l44.373,34.987c6.827,5.12,11.093,12.8,11.947,21.333c0.853,8.533-1.707,16.213-6.827,22.187
+                                C279.32,266.947,267.373,272.92,254.573,272.92z"/>
+                            <path d="M254.573,289.133L254.573,289.133c-5.12,0-8.533-4.267-8.533-8.533v-44.373V127c0-5.12,3.413-8.533,8.533-8.533l0,0
+                                c5.12,0,8.533,3.413,8.533,8.533v109.227V280.6C263.107,285.72,258.84,289.133,254.573,289.133z"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="right">
+                    <div class="title">
+                        An Encouragement
+                    </div>
+                    <div class="text">
+                        Oops! It looks like you don't have full access to our exchange service yet.
+                        To unlock all features and functionality, you need to obtain the status of VIP investor. 
+                        by having a balance or investing and trading sum equivalent or more then 10,000$. 
+                        Thank you for choosing our exchange service.  
+                    </div>
+                    <div onclick="nft_page()" id="close_button">
+                        Continue
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="header">
+            <div class="top_wrapper">
+                <div class="top">
+                    <div class="left">
+                        <a class="logo" href="/">
+                            <img src="../static/images/perrot.svg" alt="" width="50px">
+                            <span>Perrot</span>
+                        </a>
+                    </div>
+                    <div class="middle">
+                        <div class="links">
+                            <ul>
+                                <a href="/trading"><li>Spot trading</li></a>
+                                <a href="/profile/invest"><li>Invest</li></a>
+                                <a id="Market_Screener" href="/market-screener"><li>Market Screener</li></a>
+                                <a id="Technical_Analysis" href="/tech-anal"><li>Technical Analysis</li></a>
+                                <a href="/profile/referral_system"><li>Referral</li></a>
+
+                                <div class="premium_user_link"><li>Futures</li></div>
+                                <div class="premium_user_link"><li>Options</li></div>
+                                
+                                <div onclick="nft_page()" id="NFTs" class="premium_user_link"><li>NFTs</li></div>
+                                <a id="FandQ" href="/faq"><li>F&Q</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div id="inner_right" onclick="toggle_down_list()">
+                            <div class="user_name">
+                                <span>{{ g.user["email"] }}</span>
+                                <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.34502 3.10642L4.95202 7.05416C5.49516 7.64861 6.37253 7.64861 6.91567 7.05416L10.5227 3.10642C11.4 2.14616 10.7733 0.5 9.53388 0.5H2.31989C1.08042 0.5 0.467644 2.14616 1.34502 3.10642Z"></path>
+                                </svg>
+                            </div>
+                            <div class="user_logo">
+                                <img src="../static/images/avatar.svg" width="40px">
+                            </div>
+                        </div>
+
+                        <div id="down_list" class="visible">
+                            <a href="/profile/deposit">
+                                <img src="../../static/images/depo.svg" >
+                                <li>Deposit</li>
+                            </a>
+                            <a href="/">
+                                <img src="../../static/images/wallet-menu.svg" >
+                                <li>Wallet</li>
+                            </a>
+                            <a href="/trading">
+                                <img src="../../static/images/chart-candel.svg" >
+                                <li>Spot trading</li>
+                            </a>
+                            <a href="/profile/invest">
+                                <img src="../../static/images/invest-c.svg" >
+                                <li>Invest</li>
+                            </a>
+                            <a href="/profile/referral_system">
+                                <img src="../../static/images/dollar-b.svg" >
+                                <li>Referral</li>
+                            </a>
+                            <a href="/profile/withdraw">
+                                <img src="../../static/images/withy.svg" >
+                                <li>Withdraw</li>
+                            </a>
+                            <a href="/market-screener">
+                                <img src="../../static/images/loop-o.svg" >
+                                <li>Market Screener</li>
+                            </a>
+                            <a href="/tech-anal">
+                                <img src="../../static/images/anal-ysis.svg" >
+                                <li>Technical Analysis</li>
+                            </a>
+                            <a class="premium_user_link">
+                                <img src="../../static/images/futures-f.svg" >
+                                <li>Futures</li>
+                            </a>
+                            <a class="premium_user_link">
+                                <img src="../../static/images/options-s.svg" >
+                                <li>Options</li>
+                            </a>
+                            <a class="premium_user_link">
+                                <img src="../../static/images/nft-n.svg" >
+                                <li>NFTs</li>
+                            </a>
+                            <a href="/faq">
+                                <img src="../../static/images/quest-q.svg" >
+                                <li>F&Q</li>
+                            </a>
+                            <a href="/auth/logout">
+                                <img src="../../static/images/exit.svg" >
+                                <li>Logout</li>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_wrapper">
+                <div class="bottom">
+                    <div class="left">
+                        <div class="logo">
+                            <svg width="59" height="45" viewBox="0 0 59 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="52.4746" y1="8.35617" x2="31.3562" y2="38.5254" stroke="#FF5B5B" stroke-width="12" stroke-linecap="round"></line>
+                                <line x1="29.4746" y1="8.35617" x2="8.35616" y2="38.5254" stroke="#7044EE" stroke-width="12" stroke-linecap="round"></line>
+                            </svg>
+                            <div class="logo_text">
+                                <div class="title">
+                                    {{ self.title() }}
+                                </div>
+                                <div class="description">Manage your digital assets</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="links">
+                            <ul>
+                                <a href="/profile/deposit">
+                                    <li>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.8851 12.8652H7.71838" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M9.80164 10.8315V14.9982" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M10.5502 2.09828L10.5252 2.15662L8.10855 7.76495H5.73355C5.16688 7.76495 4.62521 7.88162 4.13354 8.08995L5.59188 4.60662L5.62521 4.52328L5.68355 4.38995C5.70021 4.33995 5.71688 4.28995 5.74188 4.24828C6.83355 1.72328 8.06688 1.14828 10.5502 2.09828Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M15.0419 7.93197C14.6669 7.8153 14.2669 7.7653 13.8669 7.7653H8.10852L10.5252 2.15697L10.5502 2.09863C10.6752 2.1403 10.7919 2.19863 10.9169 2.24863L12.7585 3.02363C13.7835 3.44863 14.5002 3.8903 14.9335 4.42363C15.0169 4.52363 15.0835 4.6153 15.1419 4.72363C15.2169 4.8403 15.2752 4.95697 15.3085 5.08197C15.3419 5.15697 15.3669 5.23197 15.3835 5.29863C15.6085 5.99863 15.4752 6.85697 15.0419 7.93197Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M17.935 11.8318V13.4568C17.935 13.6235 17.9266 13.7901 17.9183 13.9568C17.76 16.8651 16.135 18.3318 13.0516 18.3318H6.55164C6.35164 18.3318 6.15164 18.3151 5.95997 18.2901C3.30997 18.1151 1.8933 16.6985 1.7183 14.0485C1.6933 13.8568 1.67664 13.6568 1.67664 13.4568V11.8318C1.67664 10.1568 2.6933 8.71514 4.1433 8.09014C4.6433 7.8818 5.17664 7.76514 5.7433 7.76514H13.8766C14.285 7.76514 14.685 7.82347 15.0516 7.9318C16.71 8.44014 17.935 9.99014 17.935 11.8318Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M5.59187 4.60693L4.13354 8.09027C2.68354 8.71527 1.66687 10.1569 1.66687 11.8319V9.39027C1.66687 7.0236 3.3502 5.0486 5.59187 4.60693Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M17.9324 9.38988V11.8315C17.9324 9.99821 16.7157 8.43988 15.0491 7.93988C15.4824 6.85654 15.6074 6.00654 15.3991 5.29821C15.3824 5.22321 15.3574 5.14821 15.3241 5.08154C16.8741 5.88154 17.9324 7.52321 17.9324 9.38988Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <span>Deposit</span>
+                                    </li>
+                                </a>
+                                <a href="/profile/withdraw">
+                                    <li>
+                                        <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.8851 12.8652H7.71838" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M10.5502 2.09828L10.5252 2.15662L8.10855 7.76495H5.73355C5.16688 7.76495 4.62521 7.88162 4.13354 8.08995L5.59188 4.60662L5.62521 4.52328L5.68355 4.38995C5.70021 4.33995 5.71688 4.28995 5.74188 4.24828C6.83355 1.72328 8.06688 1.14828 10.5502 2.09828Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M15.0419 7.93197C14.6669 7.8153 14.2669 7.7653 13.8669 7.7653H8.10852L10.5252 2.15697L10.5502 2.09863C10.6752 2.1403 10.7919 2.19863 10.9169 2.24863L12.7585 3.02363C13.7835 3.44863 14.5002 3.8903 14.9335 4.42363C15.0169 4.52363 15.0835 4.6153 15.1419 4.72363C15.2169 4.8403 15.2752 4.95697 15.3085 5.08197C15.3419 5.15697 15.3669 5.23197 15.3835 5.29863C15.6085 5.99863 15.4752 6.85697 15.0419 7.93197Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M17.935 11.8318V13.4568C17.935 13.6235 17.9266 13.7901 17.9183 13.9568C17.76 16.8651 16.135 18.3318 13.0516 18.3318H6.55164C6.35164 18.3318 6.15164 18.3151 5.95997 18.2901C3.30997 18.1151 1.8933 16.6985 1.7183 14.0485C1.6933 13.8568 1.67664 13.6568 1.67664 13.4568V11.8318C1.67664 10.1568 2.6933 8.71514 4.1433 8.09014C4.6433 7.8818 5.17664 7.76514 5.7433 7.76514H13.8766C14.285 7.76514 14.685 7.82347 15.0516 7.9318C16.71 8.44014 17.935 9.99014 17.935 11.8318Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M5.59187 4.60693L4.13354 8.09027C2.68354 8.71527 1.66687 10.1569 1.66687 11.8319V9.39027C1.66687 7.0236 3.3502 5.0486 5.59187 4.60693Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M17.9324 9.38988V11.8315C17.9324 9.99821 16.7157 8.43988 15.0491 7.93988C15.4824 6.85654 15.6074 6.00654 15.3991 5.29821C15.3824 5.22321 15.3574 5.14821 15.3241 5.08154C16.8741 5.88154 17.9324 7.52321 17.9324 9.38988Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <span>Withdraw</span>
+                                    </li>
+                                </a>
+                                <a href="/profile/transactions">
+                                    <li>
+                                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18.0002 5.83317V14.1665C18.0002 16.6665 16.7502 18.3332 13.8336 18.3332H7.16691C4.25024 18.3332 3.00024 16.6665 3.00024 14.1665V5.83317C3.00024 3.33317 4.25024 1.6665 7.16691 1.6665H13.8336C16.7502 1.6665 18.0002 3.33317 18.0002 5.83317Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M12.5836 3.75V5.41667C12.5836 6.33333 13.3336 7.08333 14.2502 7.08333H15.9169" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M7.16687 10.8335H10.5002" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M7.16687 14.1665H13.8335" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <span>Transactions</span>
+                                    </li>
+                                </a>
+                                <a href="/profile/investments">
+                                    <li>
+                                        <svg fill="#ffffff" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M22,9H13V6a3,3,0,0,1,3-3,1,1,0,0,0,0-2,4.993,4.993,0,0,0-4.495,2.851,6.328,6.328,0,0,0-8.02-.708,1,1,0,0,0-.414,1.228,6.179,6.179,0,0,0,3.32,3.218,5.785,5.785,0,0,0,2.07.372A7.889,7.889,0,0,0,11,7.491V9H2a1,1,0,0,0-1,1V22a1,1,0,0,0,1,1H22a1,1,0,0,0,1-1V10A1,1,0,0,0,22,9ZM7.123,5.728A3.914,3.914,0,0,1,5.4,4.409,4.332,4.332,0,0,1,10.421,5.59,4.809,4.809,0,0,1,7.123,5.728ZM21,19.184A2.987,2.987,0,0,0,19.184,21H4.816A2.987,2.987,0,0,0,3,19.184V12.816A2.987,2.987,0,0,0,4.816,11H19.184A2.987,2.987,0,0,0,21,12.816ZM14,16a2,2,0,1,1-2-2A2,2,0,0,1,14,16Z"/>
+                                        </svg>
+                                        <span>Investments</span>
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% block content %}{% endblock %}
+        <div id="footer">
+            <div class="footer_wrapper">
+                <div class="left">
+                    <div class="top">
+                        <div class="name">
+                            <img src="static/images/perrot.svg" alt="" height="50px">
+                            <span>Perrot</span>
+                        </div>
+                        <svg width="169" height="18" viewBox="0 0 169 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.2248 4.81993C23.8867 4.70895 26.0204 5.76327 27.2835 7.99677C28.2398 9.70312 29.3174 9.99445 31.1015 9.37018C35.683 7.76788 40.2859 6.22108 44.9173 4.77831C47.7861 3.88352 50.3552 4.36212 52.4604 6.74129C52.967 7.31008 54.2016 7.68465 54.9795 7.53205C58.9758 6.7413 62.9364 5.74245 66.9113 4.82685C71.3787 3.80027 75.8317 2.68354 80.3347 1.80955C83.1107 1.26852 85.7369 2.32977 87.4425 4.31357C89.9259 7.19216 92.9659 7.05342 96.0345 6.38753C101.822 5.13899 107.51 3.48815 113.283 2.17718C116.237 1.51129 119.277 1.01879 122.303 0.859255C123.688 0.782956 125.3 1.44885 126.506 2.22572C129.061 3.8627 131.887 3.74478 134.578 3.46039C142.035 2.66964 149.492 1.77487 156.864 0.463899C160.911 -0.257482 164.2 1.24769 167.619 2.59334C168.297 2.86386 169.181 4.32745 168.967 4.72975C168.461 5.68004 167.462 6.60257 166.434 7.00488C165.563 7.3517 164.279 7.1991 163.351 6.85228C158.534 5.04189 153.867 6.73436 149.157 7.26846C143.362 7.92048 137.596 8.80832 131.794 9.31468C130.046 9.46728 127.855 9.19676 126.499 8.25342C122.788 5.67309 119.042 6.52626 115.224 7.40718C109.122 8.81526 103.049 10.3205 96.9622 11.7771C91.9454 12.9771 87.5424 12.11 83.7459 8.43377C82.9323 7.64302 81.1197 7.19216 79.9779 7.45574C74.4758 8.69735 69.038 10.2234 63.5787 11.6661C59.9035 12.6303 56.2997 14.2118 52.3747 12.769C51.8895 12.5886 51.2971 12.5054 50.9403 12.1863C47.1153 8.74591 43.383 10.6187 39.5865 12.2557C36.9603 13.3863 34.3199 14.5169 31.5867 15.3424C28.1542 16.3828 25.5423 15.0927 23.0232 11.5759C22.1383 10.3343 21.3604 9.82798 19.8333 10.1262C15.3588 10.9863 11.4838 13.0326 7.99416 15.7724C4.83279 18.2626 2.41358 18.7551 0.401143 16.7921C-0.0555794 16.3481 -0.148338 14.7528 0.25843 14.3921C5.06115 10.0846 14.1385 5.18061 21.2391 4.82685L21.2248 4.81993Z" fill="#6544C6"></path>
+                        </svg>
+                        <div class="desc">
+                            <span>
+                                Innovative cryptocurrency exchange<br> with advanced financial services. We<br> rely on blockchain technology to<br> provide everything you need for wise<br> trading and investment. 
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <span>
+                            Subscribe to our newsletter
+                        </span>
+                        <div class="sub_form">
+                            <input type="email" name="" id="" placeholder="Enter email">
+                            <a id="footer_email_sub_btn" type="button">Subscribe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="col">
+                        <div class="name">Products</div>
+                        <div class="list">
+                            <ul>
+                                <a href=""><li>Spot trading</li></a>
+                                <a href=""><li>Futures trading</li></a>
+                                <a href=""><li>Options trading</li></a>
+                                <a href=""><li>Wallet</li></a>
+                                <a href=""><li>Instant swap</li></a>
+                                <a href=""><li>P2P trading</li></a>
+                                <a href=""><li>DeFi Staking</li></a>
+                                <a href=""><li>Cexalp Visa Card</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="name">Services</div>
+                        <div class="list">
+                            <ul>
+                                <a href=""><li>24/7 Support chat</li></a>
+                                <a href=""><li>Copy trading</li></a>
+                                <a href=""><li>Trading bots</li></a>
+                                <a href=""><li>ETH 2.0 staking</li></a>
+                                <a href=""><li>Launchpad</li></a>
+                                <a href=""><li>Savings</li></a>
+                                <a href=""><li>Cexalp ventures</li></a>
+                                <a href=""><li>Buy crypto</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="name">Information</div>
+                        <div class="list">
+                            <ul>
+                                <a href=""><li>Fees</li></a>
+                                <a href=""><li>Platform status</li></a>
+                                <a href=""><li>Wallet security</li></a>
+                                <a href=""><li>Indices</li></a>
+                                <a href=""><li>Trading API</li></a>
+                                <a href=""><li>Token listing</li></a>
+                                <a href=""><li>Referral system</li></a>
+                                <a href=""><li>Bug Bounty</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="name">Legal</div>
+                        <div class="list">
+                            <ul>
+                                <a href=""><li>Terms of service</li></a>
+                                <a href=""><li>Privacy notice</li></a>
+                                <a href=""><li>Cookies policy</li></a>
+                                <a href=""><li>AML & KYC policy</li></a>
+                                <a href=""><li>Risk Disclosure Statement</li></a>
+                                <a href=""><li>Regulatory License</li></a>
+                                <a href=""><li>Special Treatment</li></a>
+                                <a href=""><li>Law Enforcement Requests</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="statement">
+                <div class="statement_wrapper">
+                    <span>
+                        In acceding to or using the Platform and the Site, you represent and warrant that you are fully aware of the risks associated with the transactions involving Digital Assets or the use of Platform. You agree and understand that you are solely responsible for determining the nature, potential value, suitability, and appropriateness of these risks for yourself, and that the Company does not give advice or recommendations regarding any Digital Asset, including the suitability and appropriateness of, and investment strategies for, any Digital Asset. You agree and understand that you access and use the Platform and the Site at your own risk.
+                    </span>
+                    <br>
+                    <span class="sign">Perrot 2023 © All right reserved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function nft_page() {
+            let vip_page = document.getElementById('vip_page')
+            vip_page.classList.toggle("vis")
+            console.log("ksa")
+        }
+
+        function toggle_down_list() {
+            var element = document.getElementById("down_list");
+            element.classList.toggle("visible");
+        }
+    </script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

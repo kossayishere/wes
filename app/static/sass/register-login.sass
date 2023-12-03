@@ -1,0 +1,172 @@
+$grayish: #78778B
+$light-gray: #DADADA
+$blackish: #1B212D
+
+$bigger-screen: 1176px
+$phone-screen: 500px
+
+$light-red: #FFE1E2
+$reddish: #E30000
+
+#content
+	width: 100%
+	display: flex
+	@media (max-width: $bigger-screen)
+		flex-direction: column
+	#left
+		width: 50%
+		display: flex
+		flex-direction: column
+		align-items: center
+		@media (max-width: $bigger-screen)
+			width: 100%
+
+		.top
+			width: 70%
+			margin-top: 30px
+			@media (max-width: $phone-screen)
+				width: 90%
+			.logo
+				a
+					display: flex
+					cursor: pointer
+					text-decoration: none
+					color: black
+					span
+						margin: auto 30px
+						line-height: 1.8
+						font-size: 30px
+						font-weight: bold
+
+		#errors_wrapper
+			visibility: hidden
+			width: 70%
+			margin-top: 50px
+			@media (max-width: $phone-screen)
+				width: 90%
+			.error
+				position: relative
+				padding: 10px
+				background-color: $light-red
+				border: 2px solid $reddish
+				border-radius: 5px
+				margin-top: 10px
+				svg
+					position: absolute
+					top: 8px
+				span
+					font-size: 14px
+					margin-left: 40px
+
+		.middel
+			display: flex
+			flex-direction: column
+			width: 70%
+			margin-top: 20px
+			@media (max-width: $phone-screen)
+				width: 90%
+			.form_head
+				display: flex
+				flex-direction: column
+				.head_title
+					font-size: 28px
+					font-weight: bold
+				.head_desc
+					margin-top: 5px
+					color: $grayish
+			.form_wrapper
+				form
+					display: flex
+					flex-direction: column
+					.label
+						margin: 25px 0 10px 0
+						font-size: 14px
+					input:not([type=checkbox])
+						font-size: 14px
+						color: $blackish
+						border: 1px solid $light-gray
+						border-radius: 5px
+						position: relative
+						outline-color: #7044EE
+						padding: 15px 50px
+						width: 100%
+					.input_wrapper
+						position: relative
+						svg
+							position: absolute
+							z-index: 10
+							top: 18px
+							left: 20px
+
+					.tos_forget
+						display: flex
+						justify-content: space-between
+						margin: 20px 0
+						.tos
+							display: flex
+							input[type=checkbox]
+								margin-right: 10px
+								width: 20px
+								height: 20px
+							span
+								line-height: 1.5
+								font-size: 14px
+						.forget
+							a
+								font-size: 14px
+								color: black
+
+
+					#reg_button, #login_button
+						padding: 15px
+						color: #fff
+						background-color: #7044EE
+						border: none
+						border-radius: 5px
+						font-size: 17px
+						cursor: pointer
+
+			.link_sign_in
+				margin: 40px auto
+				span
+					color: $grayish
+					font-size: 14px
+					a
+						text-decoration: none
+						color: #000
+
+	#right
+		width: 50%
+		height: 100vh
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: #121212
+		@media (max-width: $bigger-screen)
+			width: 100%
+		.center
+			display: flex
+			flex-direction: column
+			img
+				width: 100%
+					
+			.description
+				display: flex
+				flex-direction: column
+				align-items: center
+				margin-top: 20px
+				.desc_title
+					color: #000
+					font-size: 18px
+					font-weight: bold
+					padding: 8px 0 5px 0
+					background-color: #fff
+					border-radius: 10px
+					text-align: center
+					width: 70%
+				.desc_body
+					color: gray
+					font-size: 12px
+					margin: 10px					
+					padding-left: 10px					
+					width: 70%

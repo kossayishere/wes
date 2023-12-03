@@ -1,0 +1,228 @@
+body {
+  background: #000; }
+
+#content_wrapper {
+  width: 100%;
+  background: #000; }
+  #content_wrapper .upper {
+    width: 100%;
+    display: flex; }
+    #content_wrapper .upper .left {
+      width: 350px;
+      margin: 10px; }
+      @media (max-width: 750px) {
+        #content_wrapper .upper .left {
+          display: none; } }
+      #content_wrapper .upper .left #values_table {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 12.5px;
+        background-color: #17181e;
+        border-radius: 5px;
+        padding: 5px 10px;
+        height: 450px;
+        overflow-y: scroll; }
+        #content_wrapper .upper .left #values_table .head, #content_wrapper .upper .left #values_table .coin {
+          width: 100%;
+          display: flex;
+          padding: 5px; }
+          #content_wrapper .upper .left #values_table .head .currency, #content_wrapper .upper .left #values_table .coin .currency {
+            display: flex;
+            color: #b7bdc6;
+            font-weight: bold;
+            width: 40%; }
+            #content_wrapper .upper .left #values_table .head .currency img, #content_wrapper .upper .left #values_table .coin .currency img {
+              margin-top: -2px; }
+            #content_wrapper .upper .left #values_table .head .currency .coin_name, #content_wrapper .upper .left #values_table .coin .currency .coin_name {
+              margin-left: 10px; }
+              #content_wrapper .upper .left #values_table .head .currency .coin_name .coin_n, #content_wrapper .upper .left #values_table .coin .currency .coin_name .coin_n {
+                color: #fff; }
+              #content_wrapper .upper .left #values_table .head .currency .coin_name .ustd_n, #content_wrapper .upper .left #values_table .coin .currency .coin_name .ustd_n {
+                color: #b7bdc6; }
+          #content_wrapper .upper .left #values_table .head .last, #content_wrapper .upper .left #values_table .coin .last {
+            width: 35%;
+            color: #b7bdc6;
+            text-align: right; }
+          #content_wrapper .upper .left #values_table .head .change, #content_wrapper .upper .left #values_table .coin .change {
+            width: 25%;
+            color: #b7bdc6;
+            text-align: right; }
+      #content_wrapper .upper .left .trades {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 12.5px;
+        background-color: #17181e;
+        border-radius: 5px;
+        margin-top: 10px;
+        height: 450px;
+        overflow-y: scroll; }
+        #content_wrapper .upper .left .trades .title {
+          color: #fff;
+          padding: 15px;
+          font-size: 16px;
+          font-weight: bold;
+          border-bottom: 1px solid #f4f9ff1a; }
+        #content_wrapper .upper .left .trades #trades_head {
+          display: flex;
+          width: 100%;
+          color: #b7bdc6; }
+          #content_wrapper .upper .left .trades #trades_head div {
+            padding: 10px 10px; }
+          #content_wrapper .upper .left .trades #trades_head .price {
+            width: 30%; }
+          #content_wrapper .upper .left .trades #trades_head .size {
+            width: 35%; }
+          #content_wrapper .upper .left .trades #trades_head .time {
+            text-align: center;
+            width: 35%; }
+        #content_wrapper .upper .left .trades #inner_trades {
+          color: #b7bdc6;
+          display: flex;
+          flex-direction: column; }
+          #content_wrapper .upper .left .trades #inner_trades .coin {
+            display: flex;
+            width: 100%; }
+            #content_wrapper .upper .left .trades #inner_trades .coin div {
+              padding: 10px; }
+            #content_wrapper .upper .left .trades #inner_trades .coin .coin_value {
+              width: 30%; }
+            #content_wrapper .upper .left .trades #inner_trades .coin .coin_quantity {
+              width: 35%; }
+            #content_wrapper .upper .left .trades #inner_trades .coin .coin_time {
+              text-align: right;
+              width: 35%; }
+    #content_wrapper .upper .right {
+      width: calc( 100% - 350px);
+      display: flex;
+      flex-direction: column;
+      margin: 10px 10px 10px 0; }
+      @media (max-width: 750px) {
+        #content_wrapper .upper .right {
+          width: 100%; } }
+      #content_wrapper .upper .right .infos {
+        width: 100%; }
+      #content_wrapper .upper .right .chart {
+        border-radius: 30px; }
+        #content_wrapper .upper .right .chart #inner_chart {
+          border-radius: 30px; }
+      #content_wrapper .upper .right .actions {
+        display: flex;
+        justify-content: space-evenly;
+        width: calc( 100% - 20px);
+        margin: 10px;
+        height: 300px;
+        background-color: #17181e;
+        border-radius: 5px; }
+        @media (max-width: 750px) {
+          #content_wrapper .upper .right .actions {
+            flex-direction: column;
+            height: 600px; } }
+        #content_wrapper .upper .right .actions .left_action, #content_wrapper .upper .right .actions .right_action {
+          width: 48%;
+          padding: 20px; }
+          @media (max-width: 750px) {
+            #content_wrapper .upper .right .actions .left_action, #content_wrapper .upper .right .actions .right_action {
+              width: 100%; } }
+          #content_wrapper .upper .right .actions .left_action .available, #content_wrapper .upper .right .actions .right_action .available {
+            width: 100%;
+            color: #B7BDC6;
+            margin: 10px 0 20px 0; }
+            #content_wrapper .upper .right .actions .left_action .available .coin_one, #content_wrapper .upper .right .actions .left_action .available #coin_avail, #content_wrapper .upper .right .actions .right_action .available .coin_one, #content_wrapper .upper .right .actions .right_action .available #coin_avail {
+              color: white; }
+          #content_wrapper .upper .right .actions .left_action .market_price, #content_wrapper .upper .right .actions .right_action .market_price {
+            width: 100%;
+            border: 1px dashed #272830;
+            color: #B7BDC6;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 14px; }
+          #content_wrapper .upper .right .actions .left_action .amount, #content_wrapper .upper .right .actions .right_action .amount {
+            margin-bottom: 20px;
+            position: relative; }
+            #content_wrapper .upper .right .actions .left_action .amount input, #content_wrapper .upper .right .actions .right_action .amount input {
+              width: 100%;
+              background-color: #1f2027;
+              border: 1px solid #272830;
+              outline: none;
+              color: white;
+              padding: 10px 50px 10px 10px;
+              border-radius: 5px;
+              text-align: right; }
+              #content_wrapper .upper .right .actions .left_action .amount input::placeholder, #content_wrapper .upper .right .actions .right_action .amount input::placeholder {
+                text-align: left; }
+            #content_wrapper .upper .right .actions .left_action .amount .prefix, #content_wrapper .upper .right .actions .right_action .amount .prefix {
+              position: absolute;
+              top: 0;
+              right: 10px;
+              font-size: 13px;
+              color: #fff;
+              height: 100%;
+              display: flex;
+              align-items: center; }
+          #content_wrapper .upper .right .actions .left_action .amount_get, #content_wrapper .upper .right .actions .right_action .amount_get {
+            color: #B7BDC6;
+            margin-bottom: 10px; }
+            #content_wrapper .upper .right .actions .left_action .amount_get .coin_two, #content_wrapper .upper .right .actions .right_action .amount_get .coin_two {
+              color: white; }
+          #content_wrapper .upper .right .actions .left_action .action_btn, #content_wrapper .upper .right .actions .right_action .action_btn {
+            margin-top: 20px; }
+            #content_wrapper .upper .right .actions .left_action .action_btn .sell_buy_btn, #content_wrapper .upper .right .actions .right_action .action_btn .sell_buy_btn {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 40px;
+              width: 100%;
+              border-radius: 3px;
+              border: none;
+              color: white;
+              font-size: 14px;
+              line-height: 17px;
+              cursor: pointer; }
+            #content_wrapper .upper .right .actions .left_action .action_btn #buy_btn, #content_wrapper .upper .right .actions .right_action .action_btn #buy_btn {
+              background-color: #03a66d; }
+            #content_wrapper .upper .right .actions .left_action .action_btn #sell_btn, #content_wrapper .upper .right .actions .right_action .action_btn #sell_btn {
+              background-color: #f6465d; }
+  #content_wrapper .under {
+    display: flex;
+    width: calc( 100% - 20px);
+    min-height: 300px;
+    background-color: #17181e;
+    border-radius: 5px;
+    margin: 0 10px 10px 10px; }
+    #content_wrapper .under .table {
+      width: 100%;
+      height: 100%; }
+      #content_wrapper .under .table #titles {
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid #f4f9ff1a; }
+        #content_wrapper .under .table #titles div {
+          width: 20%;
+          padding: 20px;
+          color: #b7bdc6; }
+          @media (max-width: 750px) {
+            #content_wrapper .under .table #titles div {
+              padding: 10px; } }
+      #content_wrapper .under .table #inner_table {
+        position: relative;
+        height: calc( 100% - 60px); }
+        #content_wrapper .under .table #inner_table #No_open_orders {
+          position: absolute;
+          left: calc( 50% - 60px);
+          top: 100px;
+          color: #8c90a5; }
+        #content_wrapper .under .table #inner_table .t_row {
+          display: flex;
+          width: 100%;
+          border-bottom: 1px solid #f4f9ff1a; }
+          #content_wrapper .under .table #inner_table .t_row div {
+            width: 20%;
+            padding: 20px;
+            color: #b7bdc6; }
+            @media (max-width: 750px) {
+              #content_wrapper .under .table #inner_table .t_row div {
+                padding: 10px; } }

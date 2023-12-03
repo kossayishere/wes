@@ -1,0 +1,1213 @@
+@keyframes scrollCoins {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(var(--x)); } }
+
+#index_content, #content_wrapper {
+  position: relative;
+  overflow: hidden; }
+  #index_content #header, #content_wrapper #header {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(259.03deg, #8B49F7 6.36%, #83E2D7 41.96%, #8395F0 71.23%, #FFA06B 100%);
+    position: relative; }
+    #index_content #header #header_upper, #content_wrapper #header #header_upper {
+      display: none; }
+      @media (max-width: 950px) {
+        #index_content #header #header_upper, #content_wrapper #header #header_upper {
+          display: none;
+          position: absolute;
+          width: 100%;
+          height: auto;
+          background-color: #00000000; } }
+      #index_content #header #header_upper .header_upper_wrapper, #content_wrapper #header #header_upper .header_upper_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 70px; }
+        #index_content #header #header_upper .header_upper_wrapper .left .links ul, #content_wrapper #header #header_upper .header_upper_wrapper .left .links ul {
+          list-style: none;
+          display: flex;
+          flex-direction: column; }
+          #index_content #header #header_upper .header_upper_wrapper .left .links ul a, #content_wrapper #header #header_upper .header_upper_wrapper .left .links ul a {
+            text-decoration: none;
+            width: 100%;
+            text-align: center; }
+            #index_content #header #header_upper .header_upper_wrapper .left .links ul a .link, #content_wrapper #header #header_upper .header_upper_wrapper .left .links ul a .link {
+              color: white;
+              padding: 10px;
+              margin: 10px;
+              margin-radius: 10px;
+              list-style: none;
+              font-size: 17px;
+              font-weight: bold; }
+              #index_content #header #header_upper .header_upper_wrapper .left .links ul a .link:hover, #content_wrapper #header #header_upper .header_upper_wrapper .left .links ul a .link:hover {
+                color: #2d3e50; }
+        #index_content #header #header_upper .header_upper_wrapper .right .account ul, #content_wrapper #header #header_upper .header_upper_wrapper .right .account ul {
+          margin: 12px 20px 0 0;
+          display: flex; }
+          #index_content #header #header_upper .header_upper_wrapper .right .account ul a, #content_wrapper #header #header_upper .header_upper_wrapper .right .account ul a {
+            text-decoration: none; }
+            #index_content #header #header_upper .header_upper_wrapper .right .account ul a .link, #index_content #header #header_upper .header_upper_wrapper .right .account ul a .signup, #content_wrapper #header #header_upper .header_upper_wrapper .right .account ul a .link, #content_wrapper #header #header_upper .header_upper_wrapper .right .account ul a .signup {
+              color: white;
+              padding: 10px 20px;
+              list-style: none;
+              font-size: 15px;
+              font-weight: bold; }
+            #index_content #header #header_upper .header_upper_wrapper .right .account ul a .link:hover, #content_wrapper #header #header_upper .header_upper_wrapper .right .account ul a .link:hover {
+              color: #2d3e50; }
+            #index_content #header #header_upper .header_upper_wrapper .right .account ul a .signup, #content_wrapper #header #header_upper .header_upper_wrapper .right .account ul a .signup {
+              background-color: #2d3e50;
+              border-radius: 10px; }
+              #index_content #header #header_upper .header_upper_wrapper .right .account ul a .signup:hover, #content_wrapper #header #header_upper .header_upper_wrapper .right .account ul a .signup:hover {
+                background-color: #3a5068; }
+    #index_content #header .up, #content_wrapper #header .up {
+      width: 100%;
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 20; }
+      #index_content #header .up .left, #content_wrapper #header .up .left {
+        display: flex;
+        width: 250px;
+        z-index: 10; }
+        #index_content #header .up .left .logo, #content_wrapper #header .up .left .logo {
+          font-size: 24px;
+          font-weight: bold;
+          color: white;
+          display: flex; }
+          #index_content #header .up .left .logo img, #content_wrapper #header .up .left .logo img {
+            margin: 15px 10px 10px 50px; }
+          #index_content #header .up .left .logo span, #content_wrapper #header .up .left .logo span {
+            margin-top: 30px; }
+      @media (max-width: 950px) {
+        #index_content #header .up .center, #content_wrapper #header .up .center {
+          display: none; } }
+      #index_content #header .up .center .links ul, #content_wrapper #header .up .center .links ul {
+        margin: 15px;
+        display: flex; }
+        #index_content #header .up .center .links ul a, #content_wrapper #header .up .center .links ul a {
+          text-decoration: none; }
+          #index_content #header .up .center .links ul a .link, #content_wrapper #header .up .center .links ul a .link {
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            margin-radius: 10px;
+            list-style: none;
+            font-size: 17px;
+            font-weight: bold; }
+            #index_content #header .up .center .links ul a .link:hover, #content_wrapper #header .up .center .links ul a .link:hover {
+              color: #2d3e50; }
+      #index_content #header .up .right, #content_wrapper #header .up .right {
+        display: flex;
+        width: 250px; }
+        @media (max-width: 950px) {
+          #index_content #header .up .right, #content_wrapper #header .up .right {
+            display: none; } }
+        #index_content #header .up .right .account ul, #content_wrapper #header .up .right .account ul {
+          margin-top: 25px;
+          display: flex; }
+          #index_content #header .up .right .account ul a, #content_wrapper #header .up .right .account ul a {
+            text-decoration: none; }
+            #index_content #header .up .right .account ul a .link, #index_content #header .up .right .account ul a .signup, #content_wrapper #header .up .right .account ul a .link, #content_wrapper #header .up .right .account ul a .signup {
+              color: white;
+              padding: 10px 20px;
+              list-style: none;
+              font-size: 15px;
+              font-weight: bold; }
+            #index_content #header .up .right .account ul a .link:hover, #content_wrapper #header .up .right .account ul a .link:hover {
+              color: #2d3e50; }
+            #index_content #header .up .right .account ul a .signup, #content_wrapper #header .up .right .account ul a .signup {
+              background-color: #2d3e50;
+              border-radius: 10px; }
+              #index_content #header .up .right .account ul a .signup:hover, #content_wrapper #header .up .right .account ul a .signup:hover {
+                background-color: #3a5068; }
+      #index_content #header .up #header_ham_btn, #content_wrapper #header .up #header_ham_btn {
+        display: flex;
+        flex-direction: column;
+        z-index: 20; }
+        @media (min-width: 950px) {
+          #index_content #header .up #header_ham_btn, #content_wrapper #header .up #header_ham_btn {
+            display: none; } }
+        #index_content #header .up #header_ham_btn span, #content_wrapper #header .up #header_ham_btn span {
+          width: 50px;
+          height: 10px;
+          background: black; }
+    #index_content #header .middle, #content_wrapper #header .middle {
+      margin: 100px 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      z-index: 10; }
+      @media (max-width: 950px) {
+        #index_content #header .middle, #content_wrapper #header .middle {
+          flex-direction: column;
+          align-items: center;
+          margin: 0; } }
+      #index_content #header .middle .left .what, #content_wrapper #header .middle .left .what {
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px; }
+        @media (max-width: 950px) {
+          #index_content #header .middle .left .what, #content_wrapper #header .middle .left .what {
+            margin-left: 0; } }
+        #index_content #header .middle .left .what .title, #content_wrapper #header .middle .left .what .title {
+          font-size: 63px;
+          font-weight: bold;
+          line-height: 1.3; }
+          @media (max-width: 950px) {
+            #index_content #header .middle .left .what .title, #content_wrapper #header .middle .left .what .title {
+              font-size: 38px;
+              text-align: center; } }
+          #index_content #header .middle .left .what .title span, #content_wrapper #header .middle .left .what .title span {
+            color: white;
+            background-color: #171430; }
+        #index_content #header .middle .left .what .text, #content_wrapper #header .middle .left .what .text {
+          margin-top: 20px;
+          color: white;
+          font-size: 20px;
+          display: flex; }
+          @media (max-width: 950px) {
+            #index_content #header .middle .left .what .text, #content_wrapper #header .middle .left .what .text {
+              display: none; } }
+        #index_content #header .middle .left .what .text_phone, #content_wrapper #header .middle .left .what .text_phone {
+          display: none; }
+          @media (max-width: 950px) {
+            #index_content #header .middle .left .what .text_phone, #content_wrapper #header .middle .left .what .text_phone {
+              display: flex;
+              text-align: center;
+              margin: 20px;
+              color: white;
+              font-size: 20px; } }
+        #index_content #header .middle .left .what .links, #content_wrapper #header .middle .left .what .links {
+          width: 100%;
+          display: flex;
+          justify-content: center; }
+          #index_content #header .middle .left .what .links ul, #content_wrapper #header .middle .left .what .links ul {
+            margin: 70px 0;
+            display: flex; }
+            @media (max-width: 950px) {
+              #index_content #header .middle .left .what .links ul, #content_wrapper #header .middle .left .what .links ul {
+                margin: 0 0 20px 0; } }
+            #index_content #header .middle .left .what .links ul a, #content_wrapper #header .middle .left .what .links ul a {
+              text-decoration: none; }
+              #index_content #header .middle .left .what .links ul a .link, #index_content #header .middle .left .what .links ul a .trading_link, #content_wrapper #header .middle .left .what .links ul a .link, #content_wrapper #header .middle .left .what .links ul a .trading_link {
+                margin: 10px 0;
+                list-style: none;
+                font-size: 17px;
+                font-weight: bold; }
+              #index_content #header .middle .left .what .links ul a .trading_link, #content_wrapper #header .middle .left .what .links ul a .trading_link {
+                color: white;
+                background-color: #092440;
+                border-radius: 10px;
+                position: relative;
+                padding: 20px 50px 20px 30px; }
+                #index_content #header .middle .left .what .links ul a .trading_link:hover, #content_wrapper #header .middle .left .what .links ul a .trading_link:hover {
+                  background-color: #383360; }
+                #index_content #header .middle .left .what .links ul a .trading_link::after, #content_wrapper #header .middle .left .what .links ul a .trading_link::after {
+                  content: "";
+                  position: absolute;
+                  right: 30px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  width: 11px;
+                  height: 11px;
+                  background-image: url("../images/Arrow-one.svg");
+                  background-repeat: no-repeat;
+                  background-size: cover; }
+              #index_content #header .middle .left .what .links ul a .link, #content_wrapper #header .middle .left .what .links ul a .link {
+                padding: 20px;
+                color: #2d3e50;
+                position: relative; }
+                #index_content #header .middle .left .what .links ul a .link::after, #content_wrapper #header .middle .left .what .links ul a .link::after {
+                  content: "";
+                  position: absolute;
+                  right: -5px;
+                  top: 40%;
+                  width: 13px;
+                  height: 11px;
+                  background-image: url("../images/Arrow-two.svg");
+                  background-repeat: no-repeat;
+                  background-size: cover; }
+      #index_content #header .middle .right, #content_wrapper #header .middle .right {
+        margin: 50px 100px 0 0;
+        z-index: 20; }
+        @media (max-width: 950px) {
+          #index_content #header .middle .right, #content_wrapper #header .middle .right {
+            margin: 0; } }
+        #index_content #header .middle .right .image_block .image, #content_wrapper #header .middle .right .image_block .image {
+          position: relative; }
+          #index_content #header .middle .right .image_block .image img, #content_wrapper #header .middle .right .image_block .image img {
+            position: relative; }
+          #index_content #header .middle .right .image_block .image .image-shadow, #content_wrapper #header .middle .right .image_block .image .image-shadow {
+            position: absolute;
+            top: 9%;
+            left: 5%;
+            right: 5%;
+            height: 95%;
+            background-size: auto;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            -webkit-filter: blur(25px);
+            filter: blur(25px); }
+  #index_content #triangle, #content_wrapper #triangle {
+    position: absolute;
+    right: -100px;
+    width: 120%;
+    height: 400px;
+    top: 800px;
+    background-color: #171430;
+    transform: rotate(-15deg); }
+    @media (max-width: 950px) {
+      #index_content #triangle, #content_wrapper #triangle {
+        right: -70px;
+        width: 150%;
+        height: 300px;
+        top: 1100px; } }
+  #index_content #coins, #content_wrapper #coins {
+    height: auto;
+    width: 100%;
+    background-color: #171430;
+    z-index: 30; }
+    #index_content #coins .Swipy, #content_wrapper #coins .Swipy {
+      height: 300px; }
+      #index_content #coins .Swipy .swiper, #content_wrapper #coins .Swipy .swiper {
+        width: 100%;
+        height: 100%; }
+        #index_content #coins .Swipy .swiper .swiper-wrapper, #content_wrapper #coins .Swipy .swiper .swiper-wrapper {
+          display: flex;
+          width: 100%; }
+          #index_content #coins .Swipy .swiper .swiper-wrapper .swiper-slide, #content_wrapper #coins .Swipy .swiper .swiper-wrapper .swiper-slide {
+            font-size: 30px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            text-align: center; }
+            #index_content #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide, #content_wrapper #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide {
+              display: block;
+              height: 300px;
+              background: linear-gradient(0deg, #1A1738 0%, #21253A 100%);
+              border-radius: 20px; }
+              #index_content #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .top, #content_wrapper #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .top {
+                display: flex;
+                justify-content: center;
+                padding-top: 20px;
+                padding-bottom: 10px; }
+                #index_content #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .top .coin_name, #content_wrapper #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .top .coin_name {
+                  display: flex;
+                  font-size: 20px;
+                  margin: 9px 0 0 10px; }
+              #index_content #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .middel, #content_wrapper #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .middel {
+                display: flex;
+                flex-direction: column; }
+                #index_content #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .middel .coin_price, #content_wrapper #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .middel .coin_price {
+                  font-size: 28px; }
+                #index_content #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .middel .coin_change, #content_wrapper #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .middel .coin_change {
+                  margin-top: 10px; }
+                  #index_content #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .middel .coin_change .goes_down, #content_wrapper #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .middel .coin_change .goes_down {
+                    background-color: #ff373713;
+                    border-radius: 20px;
+                    font-size: 13px;
+                    color: #ff3737;
+                    padding: 10px 20px; }
+                  #index_content #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .middel .coin_change .goes_up, #content_wrapper #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .middel .coin_change .goes_up {
+                    background-color: #25ff3013;
+                    border-radius: 20px;
+                    font-size: 13px;
+                    color: #208817;
+                    padding: 10px 20px; }
+                #index_content #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .middel .graph, #content_wrapper #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .middel .graph {
+                  margin: 10px 0;
+                  width: 100%;
+                  height: 70px; }
+                #index_content #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .middel .time span, #content_wrapper #coins .Swipy .swiper .swiper-wrapper .swiper-slide .inner_slide .middel .time span {
+                  font-size: 12px;
+                  color: #b8b8b849; }
+        #index_content #coins .Swipy .swiper .swiper_prev, #content_wrapper #coins .Swipy .swiper .swiper_prev {
+          background-image: url("../images/arrow-prev.svg");
+          left: 20px; }
+        #index_content #coins .Swipy .swiper .swiper_next, #content_wrapper #coins .Swipy .swiper .swiper_next {
+          background-image: url("../images/arrow-next.svg");
+          right: 20px; }
+        #index_content #coins .Swipy .swiper .swiper_prev, #index_content #coins .Swipy .swiper .swiper_next, #content_wrapper #coins .Swipy .swiper .swiper_prev, #content_wrapper #coins .Swipy .swiper .swiper_next {
+          width: 45px;
+          height: 45px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: absolute;
+          z-index: 20;
+          top: 50%;
+          transform: translateY(-50%);
+          cursor: pointer; }
+          @media (max-width: 950px) {
+            #index_content #coins .Swipy .swiper .swiper_prev, #index_content #coins .Swipy .swiper .swiper_next, #content_wrapper #coins .Swipy .swiper .swiper_prev, #content_wrapper #coins .Swipy .swiper .swiper_next {
+              display: none; } }
+    #index_content #coins .coins_table, #content_wrapper #coins .coins_table {
+      margin-top: 100px;
+      width: 100%;
+      background-color: #171430;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      #index_content #coins .coins_table .headline, #content_wrapper #coins .coins_table .headline {
+        color: white;
+        width: auto;
+        display: flex;
+        flex-direction: column; }
+        #index_content #coins .coins_table .headline .title, #content_wrapper #coins .coins_table .headline .title {
+          font-size: 48px;
+          font-weight: bold; }
+          @media (max-width: 950px) {
+            #index_content #coins .coins_table .headline .title, #content_wrapper #coins .coins_table .headline .title {
+              font-size: 32px;
+              text-align: center;
+              margin: 0 20px; } }
+        #index_content #coins .coins_table .headline .under_title, #content_wrapper #coins .coins_table .headline .under_title {
+          color: #8C8B90;
+          margin-top: 10px;
+          align-self: center; }
+          @media (max-width: 950px) {
+            #index_content #coins .coins_table .headline .under_title, #content_wrapper #coins .coins_table .headline .under_title {
+              text-align: center;
+              margin: 10px; } }
+      #index_content #coins .coins_table .table, #content_wrapper #coins .coins_table .table {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 50px;
+        color: white; }
+        @media (max-width: 950px) {
+          #index_content #coins .coins_table .table, #content_wrapper #coins .coins_table .table {
+            overflow: scroll;
+            margin: 50px 5px;
+            width: 95%; } }
+        #index_content #coins .coins_table .table .row, #content_wrapper #coins .coins_table .table .row {
+          display: flex;
+          margin: 5px;
+          padding: 20px 15px 15px 15px;
+          border-radius: 10px;
+          align-items: center; }
+          @media (max-width: 950px) {
+            #index_content #coins .coins_table .table .row, #content_wrapper #coins .coins_table .table .row {
+              width: 260%;
+              padding: 0;
+              margin: 0; } }
+          @media (max-width: 500px) {
+            #index_content #coins .coins_table .table .row, #content_wrapper #coins .coins_table .table .row {
+              width: 100%;
+              padding: 0;
+              margin: 0; } }
+          #index_content #coins .coins_table .table .row:hover, #content_wrapper #coins .coins_table .table .row:hover {
+            background-color: #1F1B3E; }
+          #index_content #coins .coins_table .table .row .number, #content_wrapper #coins .coins_table .table .row .number {
+            color: #8C8B90;
+            width: 5%;
+            display: flex; }
+            @media (max-width: 500px) {
+              #index_content #coins .coins_table .table .row .number, #content_wrapper #coins .coins_table .table .row .number {
+                display: none; } }
+            #index_content #coins .coins_table .table .row .number span, #content_wrapper #coins .coins_table .table .row .number span {
+              align-self: center; }
+          @media (max-width: 500px) {
+            #index_content #coins .coins_table .table .row .logo, #content_wrapper #coins .coins_table .table .row .logo {
+              width: 15%; } }
+          #index_content #coins .coins_table .table .row .name_sign, #content_wrapper #coins .coins_table .table .row .name_sign {
+            width: 30%;
+            padding: 20px;
+            line-height: 2.7; }
+            @media (max-width: 500px) {
+              #index_content #coins .coins_table .table .row .name_sign, #content_wrapper #coins .coins_table .table .row .name_sign {
+                width: 55%; } }
+            #index_content #coins .coins_table .table .row .name_sign .sign, #content_wrapper #coins .coins_table .table .row .name_sign .sign {
+              margin-left: 20px;
+              color: #8C8B90; }
+              @media (max-width: 500px) {
+                #index_content #coins .coins_table .table .row .name_sign .sign, #content_wrapper #coins .coins_table .table .row .name_sign .sign {
+                  margin-left: 5px; } }
+          #index_content #coins .coins_table .table .row .value, #index_content #coins .coins_table .table .row .change, #content_wrapper #coins .coins_table .table .row .value, #content_wrapper #coins .coins_table .table .row .change {
+            width: 20%;
+            line-height: 2.7; }
+          @media (max-width: 500px) {
+            #index_content #coins .coins_table .table .row .value, #content_wrapper #coins .coins_table .table .row .value {
+              text-align: right;
+              width: 30%; } }
+          @media (max-width: 500px) {
+            #index_content #coins .coins_table .table .row .change, #content_wrapper #coins .coins_table .table .row .change {
+              display: none; } }
+          #index_content #coins .coins_table .table .row .curve, #content_wrapper #coins .coins_table .table .row .curve {
+            width: 20%; }
+            @media (max-width: 500px) {
+              #index_content #coins .coins_table .table .row .curve, #content_wrapper #coins .coins_table .table .row .curve {
+                display: none; } }
+          #index_content #coins .coins_table .table .row .trade_button, #content_wrapper #coins .coins_table .table .row .trade_button {
+            width: 10%; }
+            @media (max-width: 500px) {
+              #index_content #coins .coins_table .table .row .trade_button, #content_wrapper #coins .coins_table .table .row .trade_button {
+                display: none; } }
+            #index_content #coins .coins_table .table .row .trade_button a, #content_wrapper #coins .coins_table .table .row .trade_button a {
+              color: white;
+              margin: 0 10px 10px 10px;
+              padding: 10px 20px;
+              border: 1px solid #4E4DA6;
+              border-radius: 10px;
+              background-color: #171430; }
+              #index_content #coins .coins_table .table .row .trade_button a:hover, #content_wrapper #coins .coins_table .table .row .trade_button a:hover {
+                background-color: #4E4DA6; }
+    #index_content #coins .stats, #content_wrapper #coins .stats {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      background-image: url("../images/bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+      color: white; }
+      @media (max-width: 950px) {
+        #index_content #coins .stats, #content_wrapper #coins .stats {
+          background-position: left;
+          margin: 0 10px; } }
+      #index_content #coins .stats .inner_stat, #content_wrapper #coins .stats .inner_stat {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        align-items: center; }
+        @media (max-width: 950px) {
+          #index_content #coins .stats .inner_stat, #content_wrapper #coins .stats .inner_stat {
+            margin: 20px 5px; } }
+        #index_content #coins .stats .inner_stat .number, #content_wrapper #coins .stats .inner_stat .number {
+          font-size: 48px;
+          font-weight: bold; }
+          @media (max-width: 950px) {
+            #index_content #coins .stats .inner_stat .number, #content_wrapper #coins .stats .inner_stat .number {
+              font-size: 42px; } }
+        #index_content #coins .stats .inner_stat .description, #content_wrapper #coins .stats .inner_stat .description {
+          font-size: 18px;
+          color: #8C8B90; }
+    #index_content #coins .product_article, #content_wrapper #coins .product_article {
+      display: flex;
+      flex-direction: row;
+      justify-items: center;
+      width: 100%;
+      background-color: #171430; }
+      #index_content #coins .product_article .product_article_wrapper, #content_wrapper #coins .product_article .product_article_wrapper {
+        display: flex;
+        width: 95%;
+        margin: auto;
+        justify-content: space-around; }
+        @media (max-width: 950px) {
+          #index_content #coins .product_article .product_article_wrapper, #content_wrapper #coins .product_article .product_article_wrapper {
+            flex-direction: column;
+            align-items: center; } }
+        #index_content #coins .product_article .product_article_wrapper .left img, #content_wrapper #coins .product_article .product_article_wrapper .left img {
+          width: 696px;
+          height: 879px; }
+          @media (max-width: 1176px) {
+            #index_content #coins .product_article .product_article_wrapper .left img, #content_wrapper #coins .product_article .product_article_wrapper .left img {
+              width: 600px;
+              height: 715px; } }
+          @media (max-width: 950px) {
+            #index_content #coins .product_article .product_article_wrapper .left img, #content_wrapper #coins .product_article .product_article_wrapper .left img {
+              width: 503px;
+              height: 600px; } }
+        #index_content #coins .product_article .product_article_wrapper .right, #content_wrapper #coins .product_article .product_article_wrapper .right {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 100px 0;
+          max-width: 562px; }
+          @media (max-width: 950px) {
+            #index_content #coins .product_article .product_article_wrapper .right, #content_wrapper #coins .product_article .product_article_wrapper .right {
+              max-width: 90%;
+              margin: 0; } }
+          #index_content #coins .product_article .product_article_wrapper .right .title, #content_wrapper #coins .product_article .product_article_wrapper .right .title {
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            line-height: 1.3; }
+            @media (max-width: 950px) {
+              #index_content #coins .product_article .product_article_wrapper .right .title, #content_wrapper #coins .product_article .product_article_wrapper .right .title {
+                text-align: center;
+                font-size: 38px;
+                line-height: 1.5; } }
+          #index_content #coins .product_article .product_article_wrapper .right .under_title, #content_wrapper #coins .product_article .product_article_wrapper .right .under_title {
+            margin: 10px 0;
+            color: #8C8B90;
+            font-size: 20px; }
+            @media (max-width: 950px) {
+              #index_content #coins .product_article .product_article_wrapper .right .under_title, #content_wrapper #coins .product_article .product_article_wrapper .right .under_title {
+                text-align: center; } }
+          #index_content #coins .product_article .product_article_wrapper .right .articles_one, #content_wrapper #coins .product_article .product_article_wrapper .right .articles_one {
+            margin-top: 40px; }
+          #index_content #coins .product_article .product_article_wrapper .right .articles_two, #content_wrapper #coins .product_article .product_article_wrapper .right .articles_two {
+            margin-top: 25px; }
+          #index_content #coins .product_article .product_article_wrapper .right .articles, #content_wrapper #coins .product_article .product_article_wrapper .right .articles {
+            display: flex; }
+            @media (max-width: 950px) {
+              #index_content #coins .product_article .product_article_wrapper .right .articles, #content_wrapper #coins .product_article .product_article_wrapper .right .articles {
+                flex-wrap: wrap; } }
+            #index_content #coins .product_article .product_article_wrapper .right .articles:first-of-type, #content_wrapper #coins .product_article .product_article_wrapper .right .articles:first-of-type {
+              margin-top: 50px; }
+            #index_content #coins .product_article .product_article_wrapper .right .articles .article, #content_wrapper #coins .product_article .product_article_wrapper .right .articles .article {
+              display: flex;
+              width: 47%;
+              color: #8C8B90;
+              margin-right: 20px; }
+              @media (max-width: 950px) {
+                #index_content #coins .product_article .product_article_wrapper .right .articles .article, #content_wrapper #coins .product_article .product_article_wrapper .right .articles .article {
+                  width: 100%;
+                  margin-right: 0; } }
+              #index_content #coins .product_article .product_article_wrapper .right .articles .article .logo, #content_wrapper #coins .product_article .product_article_wrapper .right .articles .article .logo {
+                margin-left: -10px; }
+                #index_content #coins .product_article .product_article_wrapper .right .articles .article .logo img, #content_wrapper #coins .product_article .product_article_wrapper .right .articles .article .logo img {
+                  width: 72px;
+                  height: 72px; }
+              #index_content #coins .product_article .product_article_wrapper .right .articles .article .description, #content_wrapper #coins .product_article .product_article_wrapper .right .articles .article .description {
+                margin: 10px;
+                font-size: 18px;
+                line-height: 1.4; }
+                @media (max-width: 950px) {
+                  #index_content #coins .product_article .product_article_wrapper .right .articles .article .description, #content_wrapper #coins .product_article .product_article_wrapper .right .articles .article .description {
+                    font-size: 16px; } }
+    #index_content #coins .bond, #content_wrapper #coins .bond {
+      margin-top: 40px;
+      width: 100%;
+      background-color: #171430;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      #index_content #coins .bond .headline, #content_wrapper #coins .bond .headline {
+        color: white;
+        width: auto;
+        display: flex;
+        flex-direction: column; }
+        @media (max-width: 950px) {
+          #index_content #coins .bond .headline, #content_wrapper #coins .bond .headline {
+            width: 100%;
+            text-align: center; } }
+        #index_content #coins .bond .headline .title, #content_wrapper #coins .bond .headline .title {
+          font-size: 36px;
+          font-weight: bold; }
+          @media (max-width: 950px) {
+            #index_content #coins .bond .headline .title, #content_wrapper #coins .bond .headline .title {
+              margin: 0 15px; } }
+        #index_content #coins .bond .headline .under_title, #content_wrapper #coins .bond .headline .under_title {
+          color: #8C8B90;
+          margin-top: 10px;
+          align-self: center;
+          font-size: 18px; }
+      #index_content #coins .bond .coins_track, #content_wrapper #coins .bond .coins_track {
+        display: flex;
+        width: 100%;
+        margin: 40px; }
+      #index_content #coins .bond #track_one, #content_wrapper #coins .bond #track_one {
+        animation: scrollCoins 40s linear infinite; }
+        #index_content #coins .bond #track_one .image, #content_wrapper #coins .bond #track_one .image {
+          width: 2894px;
+          height: 140px;
+          background-image: url("../images/coins.webp");
+          background-repeat: no-repeat;
+          background-size: cover; }
+    #index_content #coins .services, #content_wrapper #coins .services {
+      margin-top: 40px;
+      width: 100%;
+      background-color: #171430;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      #index_content #coins .services .headline, #content_wrapper #coins .services .headline {
+        color: white;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px; }
+        #index_content #coins .services .headline .title, #content_wrapper #coins .services .headline .title {
+          font-size: 48px;
+          font-weight: bold;
+          text-align: center; }
+        #index_content #coins .services .headline .under_title, #content_wrapper #coins .services .headline .under_title {
+          text-align: center;
+          color: #8C8B90;
+          margin-top: 10px;
+          align-self: center;
+          font-size: 18px; }
+      #index_content #coins .services .cards, #content_wrapper #coins .services .cards {
+        display: flex;
+        width: 90%;
+        justify-content: space-evenly;
+        flex-wrap: wrap; }
+        #index_content #coins .services .cards .card, #content_wrapper #coins .services .cards .card {
+          border-radius: 30px;
+          padding: 20px 50px 60px 50px;
+          position: relative;
+          width: 400px;
+          margin: 20px 5px 0 5px; }
+          #index_content #coins .services .cards .card::after, #content_wrapper #coins .services .cards .card::after {
+            font-weight: 800;
+            font-size: 221.113px;
+            line-height: 279px;
+            text-align: center;
+            background: linear-gradient(180deg, #1D1A3C 0%, #1d1a3c36 100%);
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            z-index: 5; }
+          #index_content #coins .services .cards .card::before, #content_wrapper #coins .services .cards .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 31.4751px;
+            padding: 3px;
+            background: radial-gradient(81.43% 127.97% at 50% 0%, #F6FB80 0%, #F9BCFE 18.03%, #9AD9EC 38.08%, #5FE9B9 58.14%, #DCC987 77.46%, #CFA5E9 98.25%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: add, add;
+            -webkit-mask-composite: xor;
+            mask-composite: exclude; }
+        #index_content #coins .services .cards .card_1::after, #content_wrapper #coins .services .cards .card_1::after {
+          content: "1";
+          position: absolute;
+          top: -13px;
+          right: 40px; }
+        #index_content #coins .services .cards .card_2::after, #content_wrapper #coins .services .cards .card_2::after {
+          content: "2";
+          position: absolute;
+          top: -13px;
+          right: 40px; }
+        #index_content #coins .services .cards .card_3::after, #content_wrapper #coins .services .cards .card_3::after {
+          content: "3";
+          position: absolute;
+          top: -13px;
+          right: 40px; }
+        #index_content #coins .services .cards .card .logo, #content_wrapper #coins .services .cards .card .logo {
+          margin-left: -15px; }
+          #index_content #coins .services .cards .card .logo img, #content_wrapper #coins .services .cards .card .logo img {
+            height: 120px; }
+        #index_content #coins .services .cards .card .title span, #content_wrapper #coins .services .cards .card .title span {
+          font-size: 28px;
+          color: #847AE7;
+          font-weight: bold; }
+        #index_content #coins .services .cards .card .description, #content_wrapper #coins .services .cards .card .description {
+          margin-top: 10px; }
+          #index_content #coins .services .cards .card .description span, #content_wrapper #coins .services .cards .card .description span {
+            font-size: 18px;
+            color: #8C8B90; }
+    #index_content #coins .wallet_1, #content_wrapper #coins .wallet_1 {
+      background-color: #171430; }
+      @media (max-width: 950px) {
+        #index_content #coins .wallet_1, #content_wrapper #coins .wallet_1 {
+          margin-bottom: 0; } }
+      #index_content #coins .wallet_1 .wellet_wrapper_1, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1299.23px;
+        margin: 0 auto;
+        padding: 0 15px;
+        position: relative; }
+        @media (max-width: 950px) {
+          #index_content #coins .wallet_1 .wellet_wrapper_1, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 {
+            flex-direction: column;
+            margin: 100px auto 0 auto; } }
+        #index_content #coins .wallet_1 .wellet_wrapper_1 .left, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 .left {
+          max-width: 474px;
+          padding: 157px 0 0 31px;
+          z-index: 10; }
+          @media (max-width: 950px) {
+            #index_content #coins .wallet_1 .wellet_wrapper_1 .left, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 .left {
+              max-width: 650px;
+              margin: 0 auto;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              padding: 0; } }
+          #index_content #coins .wallet_1 .wellet_wrapper_1 .left .over_title span, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 .left .over_title span {
+            font-size: 20px;
+            color: #847AE7; }
+          #index_content #coins .wallet_1 .wellet_wrapper_1 .left .title, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 .left .title {
+            margin-top: 20px; }
+            #index_content #coins .wallet_1 .wellet_wrapper_1 .left .title span, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 .left .title span {
+              font-size: 36px;
+              font-weight: bold;
+              color: white; }
+          #index_content #coins .wallet_1 .wellet_wrapper_1 .left .description, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 .left .description {
+            width: 400px;
+            margin: 40px 0; }
+            @media (max-width: 500px) {
+              #index_content #coins .wallet_1 .wellet_wrapper_1 .left .description, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 .left .description {
+                width: 100%; } }
+            #index_content #coins .wallet_1 .wellet_wrapper_1 .left .description span, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 .left .description span {
+              color: #8C8B90;
+              font-size: 18px;
+              line-height: 1.6; }
+          #index_content #coins .wallet_1 .wellet_wrapper_1 .left .to_wallet, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 .left .to_wallet {
+            margin-top: 70px; }
+            @media (max-width: 950px) {
+              #index_content #coins .wallet_1 .wellet_wrapper_1 .left .to_wallet, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 .left .to_wallet {
+                margin-top: 0; } }
+            #index_content #coins .wallet_1 .wellet_wrapper_1 .left .to_wallet a, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 .left .to_wallet a {
+              padding: 15px 60px 15px 40px;
+              color: #847AE7;
+              font-size: 15px;
+              font-weight: bold;
+              background: #171430;
+              border: 2px solid #847AE7;
+              border-radius: 10px;
+              cursor: pointer;
+              position: relative; }
+              #index_content #coins .wallet_1 .wellet_wrapper_1 .left .to_wallet a:hover, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 .left .to_wallet a:hover {
+                background: #221C4D; }
+              #index_content #coins .wallet_1 .wellet_wrapper_1 .left .to_wallet a svg, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 .left .to_wallet a svg {
+                position: absolute;
+                top: 23px;
+                right: 45px;
+                transform: translateY(-50%); }
+        #index_content #coins .wallet_1 .wellet_wrapper_1 img, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 img {
+          position: absolute;
+          right: -209px;
+          top: -54px;
+          width: 992.16px;
+          z-index: 1; }
+          @media (max-width: 950px) {
+            #index_content #coins .wallet_1 .wellet_wrapper_1 img, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 img {
+              margin: -50px auto 0;
+              position: static;
+              width: 860px; } }
+          @media (max-width: 500px) {
+            #index_content #coins .wallet_1 .wellet_wrapper_1 img, #content_wrapper #coins .wallet_1 .wellet_wrapper_1 img {
+              margin: 0 0 0 -100px;
+              position: static;
+              width: 560px; } }
+    #index_content #coins .wallet_2, #content_wrapper #coins .wallet_2 {
+      background-color: #171430;
+      margin-bottom: 150px; }
+      @media (max-width: 950px) {
+        #index_content #coins .wallet_2, #content_wrapper #coins .wallet_2 {
+          margin-bottom: 0; } }
+      #index_content #coins .wallet_2 .wellet_wrapper_2, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        max-width: 1299.23px;
+        margin: 100px auto 0 auto;
+        padding: 0 15px;
+        position: relative; }
+        @media (max-width: 950px) {
+          #index_content #coins .wallet_2 .wellet_wrapper_2, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 {
+            flex-direction: column;
+            margin-top: -80px; } }
+        #index_content #coins .wallet_2 .wellet_wrapper_2 .right, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 .right {
+          max-width: 537px;
+          z-index: 10; }
+          @media (max-width: 950px) {
+            #index_content #coins .wallet_2 .wellet_wrapper_2 .right, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 .right {
+              max-width: 650px;
+              margin: 0 auto;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              padding: 0; } }
+          #index_content #coins .wallet_2 .wellet_wrapper_2 .right .over_title span, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 .right .over_title span {
+            font-size: 20px;
+            color: #847AE7; }
+          #index_content #coins .wallet_2 .wellet_wrapper_2 .right .title, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 .right .title {
+            margin-top: 20px; }
+            #index_content #coins .wallet_2 .wellet_wrapper_2 .right .title span, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 .right .title span {
+              font-size: 36px;
+              font-weight: bold;
+              color: white; }
+          #index_content #coins .wallet_2 .wellet_wrapper_2 .right .description, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 .right .description {
+            margin: 40px 0; }
+            #index_content #coins .wallet_2 .wellet_wrapper_2 .right .description span, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 .right .description span {
+              color: #8C8B90;
+              font-size: 18px;
+              line-height: 1.6; }
+          #index_content #coins .wallet_2 .wellet_wrapper_2 .right .to_wallet, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 .right .to_wallet {
+            margin-top: 70px; }
+            @media (max-width: 950px) {
+              #index_content #coins .wallet_2 .wellet_wrapper_2 .right .to_wallet, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 .right .to_wallet {
+                margin-top: 0; } }
+            #index_content #coins .wallet_2 .wellet_wrapper_2 .right .to_wallet a, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 .right .to_wallet a {
+              padding: 15px 60px 15px 40px;
+              color: #847AE7;
+              font-size: 15px;
+              font-weight: bold;
+              background: #171430;
+              border: 2px solid #847AE7;
+              border-radius: 10px;
+              cursor: pointer;
+              position: relative; }
+              #index_content #coins .wallet_2 .wellet_wrapper_2 .right .to_wallet a:hover, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 .right .to_wallet a:hover {
+                background: #221C4D; }
+              #index_content #coins .wallet_2 .wellet_wrapper_2 .right .to_wallet a svg, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 .right .to_wallet a svg {
+                position: absolute;
+                top: 23px;
+                right: 45px;
+                transform: translateY(-50%); }
+        #index_content #coins .wallet_2 .wellet_wrapper_2 img, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 img {
+          position: absolute;
+          top: -160px;
+          left: -128px;
+          width: 880px;
+          z-index: 1; }
+          @media (max-width: 950px) {
+            #index_content #coins .wallet_2 .wellet_wrapper_2 img, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 img {
+              margin: -100px auto 0;
+              position: static;
+              top: -160px; } }
+          @media (max-width: 500px) {
+            #index_content #coins .wallet_2 .wellet_wrapper_2 img, #content_wrapper #coins .wallet_2 .wellet_wrapper_2 img {
+              margin: 0 0 0 -105px;
+              position: static;
+              width: 560px; } }
+    #index_content #coins .news, #content_wrapper #coins .news {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      background-color: #0000002a;
+      padding: 20px 0; }
+      @media (max-width: 500px) {
+        #index_content #coins .news, #content_wrapper #coins .news {
+          width: calc( 100% - 20px);
+          flex-direction: column;
+          align-items: center;
+          margin: 0 10px;
+          padding: 0; } }
+      #index_content #coins .news .logo, #content_wrapper #coins .news .logo {
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0; }
+      #index_content #coins .news .logo_ft, #content_wrapper #coins .news .logo_ft {
+        width: 100px;
+        display: flex;
+        justify-content: center; }
+        @media (max-width: 500px) {
+          #index_content #coins .news .logo_ft, #content_wrapper #coins .news .logo_ft {
+            padding: 20px 0; } }
+    #index_content #coins .calc, #content_wrapper #coins .calc {
+      margin-top: 120px;
+      margin-bottom: 150px;
+      width: 100%;
+      background-color: #171430;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 15px; }
+      @media (max-width: 500px) {
+        #index_content #coins .calc, #content_wrapper #coins .calc {
+          margin-top: 100px;
+          margin-bottom: 50px; } }
+      #index_content #coins .calc .headline, #content_wrapper #coins .calc .headline {
+        color: white;
+        width: auto;
+        display: flex;
+        flex-direction: column; }
+        #index_content #coins .calc .headline .title, #content_wrapper #coins .calc .headline .title {
+          font-size: 38px;
+          font-weight: bold;
+          align-self: center;
+          text-align: center; }
+        #index_content #coins .calc .headline .under_title, #content_wrapper #coins .calc .headline .under_title {
+          color: #8C8B90;
+          margin-top: 10px;
+          font-size: 18px;
+          text-align: center; }
+      #index_content #coins .calc .inner_calc *, #content_wrapper #coins .calc .inner_calc * {
+        position: relative;
+        z-index: 10; }
+      #index_content #coins .calc .inner_calc, #content_wrapper #coins .calc .inner_calc {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(180deg, #171430 0%, #090718 100%);
+        border-radius: 31.4751px;
+        position: relative;
+        padding: 54px 113px 59px 113px;
+        width: fit-content;
+        margin: 21px auto auto auto;
+        min-width: 859px;
+        z-index: 10; }
+        @media (max-width: 950px) {
+          #index_content #coins .calc .inner_calc, #content_wrapper #coins .calc .inner_calc {
+            min-width: 100%;
+            padding: 25px; } }
+        #index_content #coins .calc .inner_calc::before, #content_wrapper #coins .calc .inner_calc::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: 31.4751px;
+          padding: 3px;
+          background: radial-gradient(76.28% 119.86% at 50% 0%, #F6FB80 0%, #F9BCFE 18.03%, #5FE9B9 42.71%, #FB4AFF 66.15%, #26BEFF 83.33%, #FCFF7D 100%);
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          mask-composite: add, add;
+          -webkit-mask-composite: xor;
+          mask-composite: exclude; }
+        #index_content #coins .calc .inner_calc .amount, #content_wrapper #coins .calc .inner_calc .amount {
+          width: 600px;
+          display: flex;
+          justify-content: space-evenly;
+          z-index: 10; }
+          @media (max-width: 950px) {
+            #index_content #coins .calc .inner_calc .amount, #content_wrapper #coins .calc .inner_calc .amount {
+              flex-direction: column;
+              align-items: center;
+              width: 100%; } }
+          #index_content #coins .calc .inner_calc .amount .title, #content_wrapper #coins .calc .inner_calc .amount .title {
+            margin-top: 10px; }
+            #index_content #coins .calc .inner_calc .amount .title span, #content_wrapper #coins .calc .inner_calc .amount .title span {
+              font-size: 28px;
+              color: white;
+              font-weight: bold; }
+          #index_content #coins .calc .inner_calc .amount .input_wrapper, #content_wrapper #coins .calc .inner_calc .amount .input_wrapper {
+            display: flex;
+            background: #221C4D;
+            border: 2px solid #6F73CF;
+            border-radius: 10px;
+            padding: 8px 0 8px 0;
+            max-width: 158px;
+            min-width: 158px;
+            position: relative;
+            font-weight: 700;
+            font-size: 19px;
+            line-height: 175%;
+            color: #6F73CF;
+            margin-left: 70px; }
+            @media (max-width: 950px) {
+              #index_content #coins .calc .inner_calc .amount .input_wrapper, #content_wrapper #coins .calc .inner_calc .amount .input_wrapper {
+                margin-top: 20px;
+                margin-left: 0; } }
+            #index_content #coins .calc .inner_calc .amount .input_wrapper #calc_amount, #content_wrapper #coins .calc .inner_calc .amount .input_wrapper #calc_amount {
+              background: #221C4D;
+              border: none;
+              outline: none;
+              padding: 0 0 0 34px;
+              max-width: 130px;
+              -moz-appearance: textfield;
+              color: white;
+              font-size: 19px;
+              line-height: 1.15; }
+        #index_content #coins .calc .inner_calc .range, #content_wrapper #coins .calc .inner_calc .range {
+          margin-top: 30px;
+            margin-top-margin-bottom: 29px; }
+          @media (max-width: 950px) {
+            #index_content #coins .calc .inner_calc .range, #content_wrapper #coins .calc .inner_calc .range {
+              display: flex;
+              justify-content: center;
+              padding: 0 15px; } }
+          #index_content #coins .calc .inner_calc .range #calc_range, #content_wrapper #coins .calc .inner_calc .range #calc_range {
+            -webkit-appearance: none;
+            width: 98%;
+            height: 11px;
+            background: #ffffff21;
+            border-radius: 50px;
+            background-size: 0% 100%;
+            background-repeat: no-repeat; }
+            @media (max-width: 950px) {
+              #index_content #coins .calc .inner_calc .range #calc_range, #content_wrapper #coins .calc .inner_calc .range #calc_range {
+                max-width: 612px;
+                margin: 0 auto; } }
+          #index_content #coins .calc .inner_calc .range #calc_range::-webkit-slider-thumb, #content_wrapper #coins .calc .inner_calc .range #calc_range::-webkit-slider-thumb {
+            height: 22px;
+            width: 40px;
+            border-radius: 30px;
+            cursor: pointer; }
+          #index_content #coins .calc .inner_calc .range #calc_range::-moz-range-thumb, #content_wrapper #coins .calc .inner_calc .range #calc_range::-moz-range-thumb {
+            border-radius: 30px;
+            height: 22px;
+            width: 40px;
+            cursor: pointer; }
+          #index_content #coins .calc .inner_calc .range #calc_range::-moz-range-progress, #content_wrapper #coins .calc .inner_calc .range #calc_range::-moz-range-progress {
+            background-image: linear-gradient(90deg, #6F73CF 0%, #6F73CF 100%);
+            height: 11px;
+            width: 40px;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px; }
+          #index_content #coins .calc .inner_calc .range #calc_range::-webkit-slider-runnable-track, #content_wrapper #coins .calc .inner_calc .range #calc_range::-webkit-slider-runnable-track {
+            height: 11px;
+            width: 40px;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            background-image: linear-gradient(90deg, #6F73CF 0%, #6F73CF 100%); }
+        #index_content #coins .calc .inner_calc .period, #content_wrapper #coins .calc .inner_calc .period {
+          display: flex;
+          flex-direction: column;
+          text-align: center; }
+          #index_content #coins .calc .inner_calc .period .title, #content_wrapper #coins .calc .inner_calc .period .title {
+            margin-top: 50px; }
+            #index_content #coins .calc .inner_calc .period .title span, #content_wrapper #coins .calc .inner_calc .period .title span {
+              font-size: 28px;
+              color: white;
+              font-weight: bold; }
+          #index_content #coins .calc .inner_calc .period .periods_btns, #content_wrapper #coins .calc .inner_calc .period .periods_btns {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 19px;
+            margin-top: 30px; }
+            #index_content #coins .calc .inner_calc .period .periods_btns .calc_btn, #content_wrapper #coins .calc .inner_calc .period .periods_btns .calc_btn {
+              font-size: 19px;
+              border: 2px solid #6F73CF;
+              border-radius: 10px;
+              background: none;
+              cursor: pointer;
+              padding: 10px 20px;
+              margin: 5px 0;
+              min-width: 137px;
+              color: white; }
+            #index_content #coins .calc .inner_calc .period .periods_btns .calc_btn.active, #content_wrapper #coins .calc .inner_calc .period .periods_btns .calc_btn.active {
+              background: #6F73CF; }
+        #index_content #coins .calc .inner_calc .calc_results, #content_wrapper #coins .calc .inner_calc .calc_results {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          color: white;
+          justify-content: center;
+          column-gap: 70px;
+          margin-top: 50px; }
+          @media (max-width: 500px) {
+            #index_content #coins .calc .inner_calc .calc_results, #content_wrapper #coins .calc .inner_calc .calc_results {
+              column-gap: 25px;
+              margin-top: 20px; } }
+          #index_content #coins .calc .inner_calc .calc_results .cal_result, #content_wrapper #coins .calc .inner_calc .calc_results .cal_result {
+            display: flex;
+            flex-direction: column;
+            text-align: center; }
+            @media (max-width: 500px) {
+              #index_content #coins .calc .inner_calc .calc_results .cal_result, #content_wrapper #coins .calc .inner_calc .calc_results .cal_result {
+                margin-top: 20px; } }
+            #index_content #coins .calc .inner_calc .calc_results .cal_result .name span, #content_wrapper #coins .calc .inner_calc .calc_results .cal_result .name span {
+              font-size: 20px; }
+            #index_content #coins .calc .inner_calc .calc_results .cal_result .numberus span, #content_wrapper #coins .calc .inner_calc .calc_results .cal_result .numberus span {
+              font-size: 38px;
+              font-weight: bold; }
+  #index_content #calc_triangle, #content_wrapper #calc_triangle {
+    position: absolute;
+    right: -120px;
+    width: 150%;
+    height: 650px;
+    bottom: 150px;
+    background-color: black;
+    transform: rotate(-15deg);
+    z-index: 5; }
+    @media (max-width: 500px) {
+      #index_content #calc_triangle, #content_wrapper #calc_triangle {
+        right: -100px;
+        bottom: 400px; } }
+  #index_content #footer, #content_wrapper #footer {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    background-color: #121212;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-items: center; }
+    @media (max-width: 1176px) {
+      #index_content #footer, #content_wrapper #footer {
+        height: fit-content; } }
+    #index_content #footer .footer_wrapper, #content_wrapper #footer .footer_wrapper {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      margin: 50px auto; }
+      @media (max-width: 1176px) {
+        #index_content #footer .footer_wrapper, #content_wrapper #footer .footer_wrapper {
+          width: 100%;
+          justify-content: center;
+          margin: 20px auto; } }
+      #index_content #footer .footer_wrapper .left .top, #content_wrapper #footer .footer_wrapper .left .top {
+        display: flex;
+        flex-direction: column; }
+        #index_content #footer .footer_wrapper .left .top .name, #content_wrapper #footer .footer_wrapper .left .top .name {
+          display: flex; }
+          #index_content #footer .footer_wrapper .left .top .name span, #content_wrapper #footer .footer_wrapper .left .top .name span {
+            margin-top: 10px;
+            margin-left: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            color: white; }
+        #index_content #footer .footer_wrapper .left .top .desc, #content_wrapper #footer .footer_wrapper .left .top .desc {
+          display: flex; }
+          @media (max-width: 1176px) {
+            #index_content #footer .footer_wrapper .left .top .desc, #content_wrapper #footer .footer_wrapper .left .top .desc {
+              display: none; } }
+          #index_content #footer .footer_wrapper .left .top .desc span, #content_wrapper #footer .footer_wrapper .left .top .desc span {
+            margin-top: 30px;
+            color: #8C8B90;
+            font-size: 14px; }
+      #index_content #footer .footer_wrapper .left .bottom, #content_wrapper #footer .footer_wrapper .left .bottom {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px; }
+        @media (max-width: 1176px) {
+          #index_content #footer .footer_wrapper .left .bottom, #content_wrapper #footer .footer_wrapper .left .bottom {
+            display: none;
+            margin-top: 0; } }
+        #index_content #footer .footer_wrapper .left .bottom span, #content_wrapper #footer .footer_wrapper .left .bottom span {
+          color: white;
+          margin: 10px 0;
+          color: #8C8B90;
+          font-size: 14px; }
+        #index_content #footer .footer_wrapper .left .bottom .sub_form input, #content_wrapper #footer .footer_wrapper .left .bottom .sub_form input {
+          font-size: 12px;
+          line-height: 14px;
+          color: #A8A8A8;
+          background: #232323;
+          border: 1px solid #373737;
+          border-radius: 5px;
+          outline: none;
+          padding: 8px 10px 8px 11px;
+          max-width: 139px; }
+        #index_content #footer .footer_wrapper .left .bottom .sub_form #footer_email_sub_btn, #content_wrapper #footer .footer_wrapper .left .bottom .sub_form #footer_email_sub_btn {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          color: #FFFFFF;
+          padding: 7px 18px 7px 19px;
+          background: #6544C6;
+          border-radius: 5px;
+          margin-left: 10px;
+          cursor: pointer; }
+      #index_content #footer .footer_wrapper .right, #content_wrapper #footer .footer_wrapper .right {
+        display: flex; }
+        @media (max-width: 1176px) {
+          #index_content #footer .footer_wrapper .right, #content_wrapper #footer .footer_wrapper .right {
+            display: none; } }
+        #index_content #footer .footer_wrapper .right .col, #content_wrapper #footer .footer_wrapper .right .col {
+          color: white;
+          width: 170px; }
+          #index_content #footer .footer_wrapper .right .col .list, #content_wrapper #footer .footer_wrapper .right .col .list {
+            margin-top: 20px; }
+            #index_content #footer .footer_wrapper .right .col .list ul, #content_wrapper #footer .footer_wrapper .right .col .list ul {
+              list-style: none; }
+              #index_content #footer .footer_wrapper .right .col .list ul a, #content_wrapper #footer .footer_wrapper .right .col .list ul a {
+                display: flex;
+                color: #8C8B90;
+                text-decoration: none;
+                font-size: 14px;
+                margin-top: 10px; }
+                #index_content #footer .footer_wrapper .right .col .list ul a:hover, #content_wrapper #footer .footer_wrapper .right .col .list ul a:hover {
+                  color: white; }
+    #index_content #footer .statement, #content_wrapper #footer .statement {
+      color: white;
+      font-size: 10px;
+      color: #8C8B90;
+      display: flex;
+      justify-content: center; }
+      @media (max-width: 1176px) {
+        #index_content #footer .statement, #content_wrapper #footer .statement {
+          display: none; } }
+      #index_content #footer .statement .statement_wrapper, #content_wrapper #footer .statement .statement_wrapper {
+        border-top: 1px solid white;
+        width: 80%;
+        padding: 30px;
+        text-align: center; }
+        #index_content #footer .statement .statement_wrapper span .sign, #content_wrapper #footer .statement .statement_wrapper span .sign {
+          font-size: 13px;
+          color: white; }

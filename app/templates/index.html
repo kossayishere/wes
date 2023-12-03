@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div id="index_content">
+        <div id="header">
+            <div id="header_upper">
+                <div class="header_upper_wrapper">
+                    <div class="left">
+                        <div class="links">
+                            <ul>
+                                <a href="/auth/login"><li class="link">Trading</li></a>
+                                <a href="/auth/login"><li class="link">Investing</li></a>
+                                <a href="/auth/login"><li class="link">P2P</li></a>
+                                <a href="/auth/login"><li class="link">Swap</li></a>
+                                <a href="/auth/login"><li class="link">Wallet</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="account">
+                            <ul>
+                                <a href="/auth/login"><li class="link">Log In</li></a>
+                                <a href="/auth/register"><li class="signup">Sign Up</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="up">
+                <div class="left">
+                    <div class="logo">
+                        <img src="../static/images/perrot.svg" alt="" height="50px">
+                        <span>Perrot</span>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="links">
+                        <ul>
+                            <a href="/auth/login"><li class="link">Trading</li></a>
+                            <a href="/auth/login"><li class="link">Investing</li></a>
+                            <a href="/auth/login"><li class="link">P2P</li></a>
+                            <a href="/auth/login"><li class="link">Swap</li></a>
+                            <a href="/auth/login"><li class="link">Wallet</li></a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="account">
+                        <ul>
+                            <a href="/auth/login"><li class="link">Log In</li></a>
+                            <a href="/auth/register"><li class="signup">Sign Up</li></a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="header_ham_btn">
+                   <span class="bar">w</span>
+                   <span class="bar">s</span>
+                   <span class="bar">x</span>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="left">
+                    <div class="what">
+                        <span class="title">
+                            Buy, <span>invest &<br>trade</span><br>
+                            on the most<br>
+                            trusted crypto <br>
+                            exchange
+                        </span>
+                        <span class="text">
+                            Perrot has pioneered the concept of seamless<br>
+                            trading of different cryptocurrency assets.
+                        </span>
+                        <span class="text_phone">
+                            Perrot has pioneered the concept of seamless
+                            trading of different cryptocurrency assets.
+                        </span>
+                        <div class="links">
+                            <ul>
+                                <a href="/trading"><li class="trading_link">Start Trading</li></a>
+                                <a href="/invest"><li class="link">Invest</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="image_block">
+                        <div class="image">
+                            <div 
+                                class="image-shadow" 
+                                style="background-image: url('../static/images/iph.png');"
+                            ></div>
+                            <img src="static/images/iph.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="triangle"></div>
+        <div id="coins">
+            <div class="pre_swip"></div>
+            <div class="Swipy">
+                <div class="swiper mySwaper swiper-initialized swiper-horizontal swiper-pointer-events">
+                    <div class="swiper-wrapper">
+                        {% if data %}
+                            {% for d in data %}
+                            <div class="swiper-slide">
+                                <div class="inner_slide">
+                                    <div class="top">
+                                        <div class="coin_logo">
+                                            <img src="../static/images/coins/{{ d['symbol'][:-4].lower() }}.svg" height="40" alt="" srcset="">
+                                        </div>
+                                        <span class="coin_name">
+                                            {{ coins_names[d['symbol'][:-4]] }}
+                                        </span>
+                                    </div>
+                                    <div class="middel">
+                                        <div class="coin_price">${{ d['askPrice'] | float }}</div>
+                                        <div class="coin_change">
+                                        {% if d['priceChangePercent'] | float < 0 %}
+                                            <span class="goes_down">
+                                                ({{ d['priceChangePercent'] | float }}%)
+                                            </span>
+                                        {% else %}
+                                            <span class="goes_up">
+                                                ({{ d['priceChangePercent'] | float }}%)
+                                            </span>
+                                        {% endif %}
+                                        </div>
+                                        <div class="graph">
+                                            {% if d['priceChangePercent'] | float < 0 %}
+                                                <svg width="250" height="78" viewBox="0 0 250 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.09985 42.7408L3.09985 43.7397C5.53243 44.6391 10.2347 46.2981 15.0999 49.7329C19.965 53.1678 25.2347 58.5775 30.0999 62.7183C34.965 66.8591 39.2347 69.9841 44.0999 64.7161C48.965 59.448 54.2347 45.387 59.0999 46.7363C63.965 48.0856 68.2347 64.4744 73.0999 71.7082C77.965 78.942 83.2347 76.9894 88.0999 74.7048C92.965 72.4202 98.2347 69.8162 103.1 62.7183C107.965 55.6205 112.235 44.3964 117.1 39.7442C121.965 35.092 127.235 36.8325 132.1 32.752C136.965 28.6715 141.235 18.8074 146.1 14.7723C150.965 10.7371 156.235 12.8977 161.1 18.7678C165.965 24.6379 171.235 34.0667 176.1 33.7509C180.965 33.4351 185.235 23.5328 190.1 22.7633C194.965 21.9937 200.235 30.6725 205.1 38.7453C209.965 46.818 214.235 54.4224 219.1 48.7341C223.965 43.0458 229.235 23.8824 234.1 13.7734C238.965 3.66439 243.667 2.35573 246.1 1.78687H249.1" stroke="#FF6489" stroke-width="2"></path>
+                                                </svg>
+                                            {% else %}
+                                                <svg width="251" height="79" viewBox="0 0 251 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M249.1 43.71L247.1 44.7082C244.667 45.6213 239.965 47.2103 235.1 50.6972C230.235 54.1841 224.965 59.4699 220.1 63.6734C215.235 67.8769 210.965 71.0176 206.1 65.6697C201.235 60.3219 195.965 46.3329 191.1 47.7027C186.235 49.0725 181.965 65.3135 177.1 72.6569C172.235 80.0004 166.965 77.9707 162.1 75.6514C157.235 73.3322 151.965 70.8788 147.1 63.6734C142.235 56.468 137.965 45.4382 133.1 40.7155C128.235 35.9928 122.965 37.8706 118.1 33.7283C113.235 29.586 108.965 18.8594 104.1 14.7631C99.2347 10.6668 93.965 12.7967 89.0999 18.7558C84.2347 24.7148 78.965 35.047 74.0999 34.7265C69.2347 34.4059 64.965 23.5297 60.0999 22.7484C55.2347 21.9672 49.965 30.5241 45.0999 38.7192C40.2347 46.9142 35.965 55.4735 31.0999 49.699C26.2347 43.9245 20.965 24.0271 16.0999 13.7649C11.2347 3.50271 6.53243 2.36435 4.09985 1.78687L1.09985 1.78687" stroke="#31AC7C" stroke-width="2" stroke-linecap="round"></path>
+                                                </svg>
+                                            {% endif %}
+                                        </div>
+                                        <div class="time">
+                                            <span class="x_now"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="swiper_next"></div>
+                    <div class="swiper_prev"></div>
+                </div>
+            </div>
+            <div class="coins_table">
+                <div class="headline">
+                    <div class="title">
+                        <span> World class trading platform </span>
+                    </div>
+                    <div class="under_title">
+                        <span> We rank top among first tier exchanges with the highest number of listed crypto </span>
+                    </div>
+                </div>
+                <div class="table">
+                    {% if part_of_data %}
+                        {% for d in part_of_data %}
+                            <div class="row">
+                                <div class="number">
+                                    <span>{{loop.counter}}</span>
+                                </div>
+                                <div class="logo">
+                                    <img src="../static/images/coins/{{ d['symbol'][:-4].lower() }}.svg" height="40" alt="">
+                                </div>
+                                <div class="name_sign">
+                                    <span class="name">{{ coins_names[d['symbol'][:-4]] }}</span>
+                                    <span class="sign">{{ d['symbol'][:-4] }}</span>
+                                </div>
+                                <div class="value">
+                                    <span>${{ d['askPrice'] | float }}</span>
+                                </div>
+                                <div class="change">
+                                    <span>{{ d['priceChangePercent'] | float }}%</span>
+                                </div>
+                                <div class="curve">
+                                    <svg width="138" height="45" viewBox="0 0 138 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M120.003 19.1752C122.031 19.6999 125.514 24.4936 134.286 40.6264C134.492 41.0052 134.894 41.25 135.325 41.25C135.974 41.25 136.5 41.7762 136.5 42.4254V42.75C136.5 43.5784 135.828 44.25 135 44.25H2.25C1.42157 44.25 0.75 43.5784 0.75 42.75V34.5C0.75 33.6716 1.42157 33 2.25 33H3.6057C4.15665 33 4.66327 32.698 4.92526 32.2133L11.8293 19.4407C11.9415 19.2332 12.1011 19.055 12.2951 18.9207L16.875 15.75L25.2131 9.01541C25.9457 8.42369 27.0359 8.64551 27.4791 9.47644L32.4 18.7031C32.5464 18.9776 32.7745 19.1997 33.0527 19.3388L39.4257 22.5253C39.8639 22.7445 40.3815 22.7357 40.8121 22.502L52.8769 15.9525C53.1208 15.8201 53.3233 15.6226 53.4616 15.382L61.1547 2.00267C61.5568 1.3034 62.4399 1.04731 63.1537 1.423L68.4663 4.21911C68.8088 4.39936 69.0683 4.705 69.1907 5.07215L73.5331 18.0993C73.7373 18.7119 74.3105 19.125 74.9561 19.125H78.1797C78.5471 19.125 78.9017 19.2598 79.1762 19.5039L87.8179 27.1854C88.4115 27.713 89.3135 27.6865 89.8751 27.1249L93.3074 23.6927C93.7892 23.2108 94.5352 23.1143 95.1238 23.4576L102.394 27.6985C102.848 27.9632 103.407 27.9713 103.868 27.7197L119.289 19.3082C119.51 19.188 119.76 19.1123 120.003 19.1752Z" fill="url(#paint0_linear_1_430)"></path>
+                                        <path d="M0.75 33H3.60258C4.15518 33 4.66303 32.6962 4.92432 32.2092L12.4681 18.1503C12.6492 17.8129 12.9523 17.5576 13.3155 17.4365L18.0565 15.8562C18.2662 15.7863 18.4579 15.6708 18.6179 15.5182L25.1956 9.23939C25.9138 8.55391 27.0877 8.74257 27.5549 9.61854L32.4 18.7031C32.5464 18.9776 32.7745 19.1997 33.0527 19.3388L39.4257 22.5253C39.8639 22.7445 40.3815 22.7357 40.8121 22.502L52.8769 15.9525C53.1208 15.8201 53.3233 15.6226 53.4616 15.382L61.1547 2.00267C61.5568 1.3034 62.4399 1.04731 63.1537 1.423L68.4663 4.21911C68.8088 4.39936 69.0683 4.705 69.1907 5.07215L73.5331 18.0993C73.7373 18.7119 74.3105 19.125 74.9561 19.125H78.1797C78.5471 19.125 78.9017 19.2598 79.1762 19.5039L87.8179 27.1854C88.4115 27.713 89.3135 27.6865 89.8751 27.1249L93.3073 23.6927C93.7892 23.2108 94.5352 23.1143 95.1238 23.4576L102.316 27.6532C102.811 27.9419 103.427 27.9235 103.904 27.6056L114.375 20.625C123.239 15.4542 123.882 23.3066 133.072 40.4559C133.332 40.9409 133.843 41.25 134.393 41.25H137.625" stroke="#DB5748" stroke-width="2.25"></path>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_1_430" x1="68.625" y1="0.75" x2="68.625" y2="44.25" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DB5748" stop-opacity="0.52"></stop>
+                                                <stop offset="1" stop-color="#DB5748" stop-opacity="0"></stop>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div class="trade_button">
+                                    <a href="/login" >Trade</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="stats">
+                <div class="inner_stat">
+                    <span class="number">$34 018 477</span>
+                    <span class="description">Trading volume per 7 days</span>
+                </div>
+                <div class="inner_stat">
+                    <span class="number">$3 514 545</span>
+                    <span class="description">Trading volume per day</span>
+                </div>
+                <div class="inner_stat">
+                    <span class="number">130 188</span>
+                    <span class="description">Active traders</span>
+                </div>
+            </div>
+            <div class="product_article">
+                <div class="product_article_wrapper">
+                    <div class="left">
+                        <img src="static/images/phone.webp" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="title">
+                            <span>Delivering<br>Financial<br>Freedom</span>
+                        </div>
+                        <div class="under_title">
+                            <span>Our products set the standard for security, compliance,<br>experience, and investor protection.</span>
+                        </div>
+                        <div class="articles articles_one">
+                            <div class="article">
+                                <div class="logo">
+                                    <img src="static/images/Chart-up.webp" alt="">
+                                </div>
+                                <div class="description">
+                                    <span>
+                                        Cexalp allows up to 10x leverage trading by providing 
+                                        traders with access to the peer-to-peer funding market.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="article">
+                                <div class="logo">
+                                    <img src="static/images/security.webp" alt="">
+                                </div>
+                                <div class="description">
+                                    <span>
+                                        Our exchange makes it simple to research the crypto market, buy bitcoin and other cryptos, and build a portfolio for the future of money.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="articles articles_two">
+                            <div class="article">
+                                <div class="logo">
+                                    <img src="static/images/perfomance.webp" alt="">
+                                </div>
+                                <div class="description">
+                                    <span>
+                                        A high-performance crypto trading platform that delivers professional-level experience.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="article">
+                                <div class="logo">
+                                    <img src="static/images/bitcoin.webp" alt="">
+                                </div>
+                                <div class="description">
+                                    <span>
+                                        Store and manage your digital assets using the most secure, compliant, and user-friendly custody solution on the market.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bond">
+                <div class="headline">
+                    <div class="title">
+                        <span> 
+                            Select From Over 
+                            <span style="background-color: black;">&nbsp;150&nbsp;</span>
+                            Cryptocurrencies 
+                        </span>
+                    </div>
+                    <div class="under_title">
+                        <span> 
+                            Trade BTC, ETH and other cryptocurrencies in minutes.
+                        </span>
+                    </div>
+                </div>
+                <div class="coins_track_wrapper">
+                    <div class="coins_track" id="track_one" style="--x: -2876px;">
+                        <div class="image"></div>
+                        <div class="image"></div>
+                        <div class="image"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="services">
+                <div class="headline">
+                    <div class="title">
+                        <span> 
+                            Get Started
+                        </span>
+                    </div>
+                    <div class="under_title">
+                        <span> 
+                            Join the fastest growing global cryptocurrency exchange - with the lowest fees around
+                        </span>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card card_1">
+                        <div class="logo">
+                            <img src="static/images/create-img.png" alt="">
+                        </div>
+                        <div class="title">
+                            <span>
+                                Create an account
+                            </span>
+                        </div>
+                        <div class="description">
+                            <span>
+                                Create your free account with a quick verification process. It’s easy, we promise 
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card card_2">
+                        <div class="logo">
+                            <img src="static/images/deposit-img.png" alt="">
+                        </div>
+                        <div class="title">
+                            <span>
+                                Make a deposit
+                            </span>
+                        </div>
+                        <div class="description">
+                            <span>
+                                Dip a toe or go all in. Usually it takes no more than 5 min to deposit with crypto 
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card card_3">
+                        <div class="logo">
+                            <img src="static/images/start-img.png" alt="">
+                        </div>
+                        <div class="title">
+                            <span>
+                                Start trading
+                            </span>
+                        </div>
+                        <div class="description">
+                            <span>
+                                Trade spot or derivatives with up to 100x leverage. Access over 150 pairs
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wallet_1">
+                <div class="wellet_wrapper_1">
+                    <div class="left">
+                        <div class="over_title">
+                            <span>
+                                Institutional-grade cold storage system
+                            </span>
+                        </div>
+                        <div class="title">
+                            <span>
+                                Secure Crypto Wallet
+                            </span>
+                        </div>
+                        <div class="description">
+                            <span>
+                                Our safe, secure wallet infrastructure supports all our listed assets. Invest confidently, knowing that our wallets are protected by Cexalp industry-leading security and protection.
+                            </span>
+                        </div>
+                        <div class="to_wallet">
+                            <a>Wallet
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7529 7.04786C13.0602 6.74057 13.0602 6.24234 12.7529 5.93505L7.74523 0.927388C7.43793 0.620093 6.93971 0.620093 6.63241 0.927388C6.32512 1.23468 6.32512 1.73291 6.63241 2.0402L11.0837 6.49146L6.63241 10.9427C6.32512 11.25 6.32512 11.7482 6.63241 12.0555C6.93971 12.3628 7.43793 12.3628 7.74523 12.0555L12.7529 7.04786ZM0.393311 7.27833H12.1965V5.70458H0.393311V7.27833Z" fill="#847AE7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <img src="static/images/benefits_1.webp" alt="">
+                </div>
+            </div>
+            <div class="wallet_2">
+                <div class="wellet_wrapper_2">
+                    <div class="right">
+                        <div class="over_title">
+                            <span>
+                                Trade anywhere anytime
+                            </span>
+                        </div>
+                        <div class="title">
+                            <span>
+                                Trade spot, margin and<br>stake. All in one powerful<br>interface.
+                            </span>
+                        </div>
+                        <div class="description">
+                            <span>
+                                Turn into a professional trader via our one-stop services platform with powerful features, high execution speed and low fees. Buy and trade all your favorite tokens effortlessly, anytime and anywhere.
+                            </span>
+                        </div>
+                        <div class="to_wallet">
+                            <a>Start trading
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7529 7.04786C13.0602 6.74057 13.0602 6.24234 12.7529 5.93505L7.74523 0.927388C7.43793 0.620093 6.93971 0.620093 6.63241 0.927388C6.32512 1.23468 6.32512 1.73291 6.63241 2.0402L11.0837 6.49146L6.63241 10.9427C6.32512 11.25 6.32512 11.7482 6.63241 12.0555C6.93971 12.3628 7.43793 12.3628 7.74523 12.0555L12.7529 7.04786ZM0.393311 7.27833H12.1965V5.70458H0.393311V7.27833Z" fill="#847AE7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <img src="static/images/benefits_2.webp" alt="">
+                </div>
+            </div>
+            <div class="news">
+                <div class="logo">
+                    <img src="static/images/forbes.svg" alt="">
+                </div>
+                <div class="logo">
+                    <img src="static/images/gizmodo.svg" alt="">
+                </div>
+                <div class="logo">
+                    <img src="static/images/guardian.svg" alt="">
+                </div>
+                <div class="logo_ft">
+                    <img src="static/images/ft.svg" alt="">
+                </div>
+                <div class="logo">
+                    <img src="static/images/insider.svg" alt="">
+                </div>
+            </div>
+            <div class="calc">
+                <div class="headline">
+                    <div class="title">
+                        <span> 
+                            Investment calculator
+                        </span>
+                    </div>
+                    <div class="under_title">
+                        <span> 
+                            From Stacks to Polkadot, get even more from the assets you<br>hold with our staking and DeFi offers. 
+                        </span>
+                    </div>
+                </div>
+                <div class="inner_calc">
+                    <div class="amount">
+                        <div class="title">
+                            <span>Deposit amount</span>
+                        </div>
+                        <div class="input_wrapper">
+                            <input type="number" name="" id="calc_amount">
+                            $
+                        </div>
+                    </div>
+                    <div class="range">
+                        <input id="calc_range" type="range" min="0" max="10000" value="0" style="background-size: 0% 100%;">
+                    </div>
+                    <div class="period">
+                        <div class="title">
+                            <span>Select the investment period</span>
+                        </div>
+                        <div class="periods_btns">
+                            <button class="calc_btn">1 week</button>
+                            <button class="calc_btn">2 weeks</button>
+                            <button class="calc_btn">1 month</button>
+                            <button class="calc_btn">3 months</button>
+                        </div>
+                    </div>
+                    <div class="calc_results">
+                        <div class="cal_result">
+                            <div class="name">
+                                <span>Your profit</span>
+                            </div>
+                            <div class="numberus" style="color: #6FCF97;">
+                                <span id="calc_profit_result">0 $</span>
+                            </div>
+                        </div>
+                        <div class="cal_result">
+                            <div class="name">
+                                <span>Total</span>
+                            </div>
+                            <div class="numberus">
+                                <span id="calc_total_result">0 $</span>
+                            </div>
+                        </div>
+                        <div class="cal_result">
+                            <div class="name">
+                                <span>Percentage</span>
+                            </div>
+                            <div class="numberus">
+                                <span id="calc_percentage_result">10%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="calc_triangle"></div>
+        <div id="footer">
+            <div class="footer_wrapper">
+                <div class="left">
+                    <div class="top">
+                        <div class="name">
+                            <img src="static/images/perrot.svg" alt="" height="50px">
+                            <span>Perrot</span>
+                        </div>
+                        <svg width="169" height="18" viewBox="0 0 169 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.2248 4.81993C23.8867 4.70895 26.0204 5.76327 27.2835 7.99677C28.2398 9.70312 29.3174 9.99445 31.1015 9.37018C35.683 7.76788 40.2859 6.22108 44.9173 4.77831C47.7861 3.88352 50.3552 4.36212 52.4604 6.74129C52.967 7.31008 54.2016 7.68465 54.9795 7.53205C58.9758 6.7413 62.9364 5.74245 66.9113 4.82685C71.3787 3.80027 75.8317 2.68354 80.3347 1.80955C83.1107 1.26852 85.7369 2.32977 87.4425 4.31357C89.9259 7.19216 92.9659 7.05342 96.0345 6.38753C101.822 5.13899 107.51 3.48815 113.283 2.17718C116.237 1.51129 119.277 1.01879 122.303 0.859255C123.688 0.782956 125.3 1.44885 126.506 2.22572C129.061 3.8627 131.887 3.74478 134.578 3.46039C142.035 2.66964 149.492 1.77487 156.864 0.463899C160.911 -0.257482 164.2 1.24769 167.619 2.59334C168.297 2.86386 169.181 4.32745 168.967 4.72975C168.461 5.68004 167.462 6.60257 166.434 7.00488C165.563 7.3517 164.279 7.1991 163.351 6.85228C158.534 5.04189 153.867 6.73436 149.157 7.26846C143.362 7.92048 137.596 8.80832 131.794 9.31468C130.046 9.46728 127.855 9.19676 126.499 8.25342C122.788 5.67309 119.042 6.52626 115.224 7.40718C109.122 8.81526 103.049 10.3205 96.9622 11.7771C91.9454 12.9771 87.5424 12.11 83.7459 8.43377C82.9323 7.64302 81.1197 7.19216 79.9779 7.45574C74.4758 8.69735 69.038 10.2234 63.5787 11.6661C59.9035 12.6303 56.2997 14.2118 52.3747 12.769C51.8895 12.5886 51.2971 12.5054 50.9403 12.1863C47.1153 8.74591 43.383 10.6187 39.5865 12.2557C36.9603 13.3863 34.3199 14.5169 31.5867 15.3424C28.1542 16.3828 25.5423 15.0927 23.0232 11.5759C22.1383 10.3343 21.3604 9.82798 19.8333 10.1262C15.3588 10.9863 11.4838 13.0326 7.99416 15.7724C4.83279 18.2626 2.41358 18.7551 0.401143 16.7921C-0.0555794 16.3481 -0.148338 14.7528 0.25843 14.3921C5.06115 10.0846 14.1385 5.18061 21.2391 4.82685L21.2248 4.81993Z" fill="#6544C6"></path>
+                        </svg>
+                        <div class="desc">
+                            <span>
+                                Innovative cryptocurrency exchange<br> with advanced financial services. We<br> rely on blockchain technology to<br> provide everything you need for wise<br> trading and investment. 
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <span>
+                            Subscribe to our newsletter
+                        </span>
+                        <div class="sub_form">
+                            <input type="email" name="" id="" placeholder="Enter email">
+                            <a id="footer_email_sub_btn" type="button">Subscribe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="col">
+                        <div class="name">Products</div>
+                        <div class="list">
+                            <ul>
+                                <a href=""><li>Spot trading</li></a>
+                                <a href=""><li>Futures trading</li></a>
+                                <a href=""><li>Options trading</li></a>
+                                <a href=""><li>Wallet</li></a>
+                                <a href=""><li>Instant swap</li></a>
+                                <a href=""><li>P2P trading</li></a>
+                                <a href=""><li>DeFi Staking</li></a>
+                                <a href=""><li>Cexalp Visa Card</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="name">Services</div>
+                        <div class="list">
+                            <ul>
+                                <a href=""><li>24/7 Support chat</li></a>
+                                <a href=""><li>Copy trading</li></a>
+                                <a href=""><li>Trading bots</li></a>
+                                <a href=""><li>ETH 2.0 staking</li></a>
+                                <a href=""><li>Launchpad</li></a>
+                                <a href=""><li>Savings</li></a>
+                                <a href=""><li>Cexalp ventures</li></a>
+                                <a href=""><li>Buy crypto</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="name">Information</div>
+                        <div class="list">
+                            <ul>
+                                <a href=""><li>Fees</li></a>
+                                <a href=""><li>Platform status</li></a>
+                                <a href=""><li>Wallet security</li></a>
+                                <a href=""><li>Indices</li></a>
+                                <a href=""><li>Trading API</li></a>
+                                <a href=""><li>Token listing</li></a>
+                                <a href=""><li>Referral system</li></a>
+                                <a href=""><li>Bug Bounty</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="name">Legal</div>
+                        <div class="list">
+                            <ul>
+                                <a href=""><li>Terms of service</li></a>
+                                <a href=""><li>Privacy notice</li></a>
+                                <a href=""><li>Cookies policy</li></a>
+                                <a href=""><li>AML & KYC policy</li></a>
+                                <a href=""><li>Risk Disclosure Statement</li></a>
+                                <a href=""><li>Regulatory License</li></a>
+                                <a href=""><li>Special Treatment</li></a>
+                                <a href=""><li>Law Enforcement Requests</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="statement">
+                <div class="statement_wrapper">
+                    <span>
+                        In acceding to or using the Platform and the Site, you represent and warrant that you are fully aware of the risks associated with the transactions involving Digital Assets or the use of Platform. You agree and understand that you are solely responsible for determining the nature, potential value, suitability, and appropriateness of these risks for yourself, and that the Company does not give advice or recommendations regarding any Digital Asset, including the suitability and appropriateness of, and investment strategies for, any Digital Asset. You agree and understand that you access and use the Platform and the Site at your own risk.
+                    </span>
+                    <br>
+                    <span class="sign">Perrot 2023 © All right reserved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/calculator.js') }}"></script>
+    <script>
+    
+    let nows = document.querySelectorAll(".x_now")
+    let d = new Date()
+    let date = `${d.toLocaleString('default', { month: 'short' })} ${d.getDate()}, ${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}`
+    for (now of nows) {
+        now.innerText = date
+    }
+    
+    setInterval(() => {
+        const trackOne = document.getElementById("track_one")
+        const img = document.createElement("div");
+        img.classList.add('image');
+        trackOne.appendChild(img);
+        (trackOne.firstElementChild).remove()
+    }, 40000)
+
+    const swiper = new Swiper('.mySwaper', {
+        breakpoints: {
+            400: { slidesPerView: 1.8 },
+            520: { slidesPerView: 2.2 },
+            650: { slidesPerView: 2.5 },
+            800: { slidesPerView: 3 },
+            900: { slidesPerView: 3.5 },
+            1050: { slidesPerView:4 },
+            1200: { slidesPerView:4.5 },
+            1500: { slidesPerView:5.5 }
+        },
+        centeredSlides: true,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper_next",
+            prevEl: ".swiper_prev",
+        },
+
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        }
+    });
+    </script>
+</body>
+</html>

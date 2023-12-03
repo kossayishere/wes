@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    
+    <link rel="stylesheet" href="/app/static/css/global.css">
+    <link rel="stylesheet" href="/app/static/css/wallet.css">
+    <link rel="stylesheet" href="/app/static/css/deposit.css">
+    <!--
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/wallet.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/deposit.css') }}">
+    -->
+</head>
+<body>
+    <div id="content_wrapper">
+        <div id="header">
+            <div class="top_wrapper">
+                <div class="top">
+                    <div class="left">
+                        <div class="logo">
+                            <img src="/app/static/images/perrot.svg" alt="" width="50px">
+                            <span>Perrot</span>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <div class="links">
+                            <ul>
+                                <a href="/profile/trading"><li>Spot trading</li></a>
+                                <a href="/profile/swap"><li>Swap</li></a>
+                                <a href="">
+                                    <li>Derivatives</li>
+                                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.34502 3.10642L4.95202 7.05416C5.49516 7.64861 6.37253 7.64861 6.91567 7.05416L10.5227 3.10642C11.4 2.14616 10.7733 0.5 9.53388 0.5H2.31989C1.08042 0.5 0.467644 2.14616 1.34502 3.10642Z"></path>
+                                    </svg>
+                                </a>
+                                <a href="">
+                                    <li>Tools</li>
+                                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.34502 3.10642L4.95202 7.05416C5.49516 7.64861 6.37253 7.64861 6.91567 7.05416L10.5227 3.10642C11.4 2.14616 10.7733 0.5 9.53388 0.5H2.31989C1.08042 0.5 0.467644 2.14616 1.34502 3.10642Z"></path>
+                                    </svg>
+                                </a>
+                                <a href="/profile/staking"><li>Staking</li></a>
+                                <a href="">
+                                    <li>Earn</li>
+                                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.34502 3.10642L4.95202 7.05416C5.49516 7.64861 6.37253 7.64861 6.91567 7.05416L10.5227 3.10642C11.4 2.14616 10.7733 0.5 9.53388 0.5H2.31989C1.08042 0.5 0.467644 2.14616 1.34502 3.10642Z"></path>
+                                    </svg>
+                                </a>
+                                <a href="">
+                                    <li>More</li>
+                                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.34502 3.10642L4.95202 7.05416C5.49516 7.64861 6.37253 7.64861 6.91567 7.05416L10.5227 3.10642C11.4 2.14616 10.7733 0.5 9.53388 0.5H2.31989C1.08042 0.5 0.467644 2.14616 1.34502 3.10642Z"></path>
+                                    </svg>
+                                </a>
+                                <a href="/profile/support"><li>Support</li></a>
+                                <a href="/nft/my-nfts"><li>My NFTs</li></a>
+                                <a href="/profile/wallet"><li>Wallet : 0 USD</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="user_name">
+                            <span>user_name</span>
+                            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.34502 3.10642L4.95202 7.05416C5.49516 7.64861 6.37253 7.64861 6.91567 7.05416L10.5227 3.10642C11.4 2.14616 10.7733 0.5 9.53388 0.5H2.31989C1.08042 0.5 0.467644 2.14616 1.34502 3.10642Z"></path>
+                            </svg>
+                        </div>
+                        <div class="user_logo">
+                            <img src="/app/static/images/avatar.svg" width="40px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="market-crypto_content">
+            <iframe allowtransparency="true" style="user-select: none; box-sizing: border-box; display: block; height: 100%; width: 100%;" src="https://www.tradingview-widget.com/embed-widget/crypto-mkt-screener/?locale=en#%7B%22width%22%3A%22100%25%22%2C%22height%22%3A900%2C%22defaultColumn%22%3A%22overview%22%2C%22screener_type%22%3A%22crypto_mkt%22%2C%22displayCurrency%22%3A%22BTC%22%2C%22colorTheme%22%3A%22dark%22%2C%22market%22%3A%22crypto%22%2C%22enableScrolling%22%3Atrue%2C%22utm_source%22%3A%22cexalp.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22cryptomktscreener%22%2C%22page-uri%22%3A%22cexalp.com%2Fmarket-crypto%22%7D" title="crypto mkt-screener TradingView widget" lang="en" frameborder="0"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,438 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Deposit
+{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/wallet.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/deposit.css') }}">
+{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div class="outer_left">
+        <div class="deposit_container">
+            <div class="select_coin_wrapper">
+                <div class="left_step">
+                    <div class="step_number">
+                        1
+                    </div>
+                </div>
+                <div class="right">
+                    <span class="title">Select coin to deposit</span><br>
+                    <span class="description">
+                        Select the cryptocurrency you want to deposit into your account
+                    </span>
+                    <div class="drop_selection">
+                        <div id="current_coin" onclick="toggle_select_coins()">
+                            <div id="coin_left_select_btn">
+                            </div>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.10156 9.45312C6.3125 9.66406 6.66406 9.66406 6.875 9.45312L11.4453 4.90625C11.6562 4.67188 11.6562 4.32031 11.4453 4.10938L10.9062 3.57031C10.6953 3.35938 10.3438 3.35938 10.1094 3.57031L6.5 7.17969L2.86719 3.57031C2.63281 3.35938 2.28125 3.35938 2.07031 3.57031L1.53125 4.10938C1.32031 4.32031 1.32031 4.67188 1.53125 4.90625L6.10156 9.45312Z" fill="#667085"></path>
+                            </svg>
+                        </div>
+                        <div id="select_coins" class="select_coins_display">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select_network_wrapper">
+                <div class="left_step">
+                    <div class="step_number">
+                        2
+                    </div>
+                </div>
+                <div class="right">
+                    <span class="title">Select network</span><br>
+                    <span class="description">
+                        Make sure you selected the same network on the platform where you are withdrawing funds for this deposit
+                    </span>
+                    <div class="drop_selection">
+                        <div id="current_coin" onclick="toggle_select_networks()">
+                            <div id="network_left_select_btn">
+                            </div>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.10156 9.45312C6.3125 9.66406 6.66406 9.66406 6.875 9.45312L11.4453 4.90625C11.6562 4.67188 11.6562 4.32031 11.4453 4.10938L10.9062 3.57031C10.6953 3.35938 10.3438 3.35938 10.1094 3.57031L6.5 7.17969L2.86719 3.57031C2.63281 3.35938 2.28125 3.35938 2.07031 3.57031L1.53125 4.10938C1.32031 4.32031 1.32031 4.67188 1.53125 4.90625L6.10156 9.45312Z" fill="#667085"></path>
+                            </svg>
+                        </div>
+                        <div id="select_networks" class="select_networks_display">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select_amount_wrapper">
+                <div class="left_step">
+                    <div class="step_number">
+                        3
+                    </div>
+                </div>
+                <div class="right">
+                    <span class="title">Put the Amount in USD</span><br>
+                    <div class="amount_in_usd">
+                        <input type="text" id="amount_in_usd" placeholder="Amount in USD">
+                    </div>
+                </div>
+            </div>
+            <div class="select_show_but_wrapper">
+                <div class="left_step">
+                    <div class="step_number">
+                        4
+                    </div>
+                </div>
+                <div class="right">
+                    <form action="">
+                        <input type="button" value="Show address" id="show_address_button">
+                    </form>
+                </div>
+            </div>
+            <div id="select_address_wrapper">
+            </div>
+            <div id="errors_wrapper">
+                <div class="error">
+                    <svg width="24px" height="24px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="add" fill="#E30000" transform="translate(42.666667, 42.666667)">
+                                <path d="M213.333333,3.55271368e-14 C331.136,3.55271368e-14 426.666667,95.5306667 426.666667,213.333333 C426.666667,331.136 331.136,426.666667 213.333333,426.666667 C95.5306667,426.666667 3.55271368e-14,331.136 3.55271368e-14,213.333333 C3.55271368e-14,95.5306667 95.5306667,3.55271368e-14 213.333333,3.55271368e-14 Z M262.250667,134.250667 L213.333333,183.168 L164.416,134.250667 L134.250667,164.416 L183.168,213.333333 L134.250667,262.250667 L164.416,292.416 L213.333333,243.498667 L262.250667,292.416 L292.416,262.250667 L243.498667,213.333333 L292.416,164.416 L262.250667,134.250667 Z" id="Combined-Shape">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>                        
+                    <span id="error_text">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outer_right">
+        <div class="info_container">
+            <svg id="svg_green_corner" width="45" height="43" viewBox="0 0 45 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M39.6552 1H2L44 41V4.21429V3.85714V3.5L43.6379 2.78571L43.2759 2.07143L42.9138 1.71429L42.5517 1.35714L41.8276 1H39.6552Z" fill="#68BC4A" stroke="#68BC4A"></path>
+            </svg>
+            <div id="importent_info">
+                <span>Important information</span>
+            </div>
+            <div class="info_list">
+                <ul>
+                    <li>Send only BTC to this deposit address</li>
+                    <li>Ensure the network is Bitcoin (BTC)</li>
+                    <li>Deposits via smart contracts are not supported</li>
+                    <li>Do not send NFTs to this address</li>
+                </ul>                            
+            </div>
+            <div id="minimum_dep">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9.05246C17 13.4997 13.4183 17.1049 9 17.1049C4.58172 17.1049 1 13.4997 1 9.05246C1 4.60521 4.58172 1 9 1C13.4183 1 17 4.60521 17 9.05246Z" stroke="#50606B" stroke-width="1.5"></path>
+                    <path d="M10.4496 7.54403C10.4496 7.95824 10.7854 8.29403 11.1996 8.29403C11.6138 8.29403 11.9496 7.95824 11.9496 7.54403H10.4496ZM7.34961 10.5596C7.34961 10.1453 7.01382 9.80956 6.59961 9.80956C6.1854 9.80956 5.84961 10.1453 5.84961 10.5596H7.34961ZM9.74961 5.02539C9.74961 4.61118 9.41382 4.27539 8.99961 4.27539C8.5854 4.27539 8.24961 4.61118 8.24961 5.02539L9.74961 5.02539ZM8.24961 13.0778C8.24961 13.4921 8.5854 13.8278 8.99961 13.8278C9.41382 13.8278 9.74961 13.4921 9.74961 13.0778H8.24961ZM8.99961 8.18581C8.24799 8.18581 7.88159 8.06399 7.71872 7.95424C7.61927 7.88723 7.54961 7.80071 7.54961 7.54403H6.04961C6.04961 8.18412 6.27994 8.79349 6.88049 9.19818C7.41763 9.56013 8.15123 9.68581 8.99961 9.68581V8.18581ZM7.54961 7.54403C7.54961 7.38986 7.63265 7.18877 7.88935 6.99931C8.14582 6.81002 8.5359 6.67028 8.99961 6.67028V5.17028C8.24829 5.17028 7.53837 5.39404 6.9986 5.79243C6.45905 6.19065 6.04961 6.80143 6.04961 7.54403H7.54961ZM8.99961 6.67028C9.46332 6.67028 9.8534 6.81002 10.1099 6.99931C10.3666 7.18877 10.4496 7.38986 10.4496 7.54403H11.9496C11.9496 6.80143 11.5402 6.19065 11.0006 5.79243C10.4608 5.39404 9.75093 5.17028 8.99961 5.17028V6.67028ZM10.6496 10.5596C10.6496 10.8574 10.5356 11.0282 10.3104 11.1635C10.0397 11.3261 9.59414 11.4333 8.99961 11.4333V12.9333C9.73057 12.9333 10.485 12.8085 11.0829 12.4492C11.7264 12.0626 12.1496 11.4215 12.1496 10.5596H10.6496ZM8.99961 11.4333C8.46653 11.4333 8.01735 11.2858 7.72282 11.0865C7.42402 10.8844 7.34961 10.6843 7.34961 10.5596H5.84961C5.84961 11.3316 6.31246 11.9434 6.88228 12.3289C7.45638 12.7173 8.20721 12.9333 8.99961 12.9333V11.4333ZM8.99961 9.68581C9.75728 9.68581 10.1762 9.80152 10.3898 9.9409C10.536 10.0363 10.6496 10.1791 10.6496 10.5596H12.1496C12.1496 9.78022 11.8632 9.11115 11.2094 8.68461C10.623 8.30207 9.84194 8.18581 8.99961 8.18581V9.68581ZM9.74961 5.92028L9.74961 5.02539L8.24961 5.02539L8.24961 5.92028L9.74961 5.92028ZM8.24961 12.1833V13.0778H9.74961V12.1833H8.24961Z" fill="#50606B"></path>
+                </svg>
+                <span>Minimum deposit:&nbsp;</span>
+                <span id="minimum_deposit_span"></span>
+            </div>
+        </div>
+        <div class="info_container">
+            <div id="question">
+                <div class="quest">
+                    <span>Is it safe to deposit and store my cryptocurrencies with Cexalp? </span>
+                </div>
+                <div class="resp">
+                    <span>
+                        Yes, it is safe to do so! To maintain a high level of asset security and flexibility, 
+                        Cexalp uses an industry-standard cold wallet to keep your deposited assets safe, 
+                        and a hot wallet that allows for all-day withdrawals. All withdrawals undergo a 
+                        strict confirmation procedure and every withdrawal request is manually reviewed 
+                        by our team daily at 0:00AM, 8:00AM, and 4:00PM UTC. In addition, 100% of our 
+                        traders' deposit assets are segregated from Cexalp's own operating budget for 
+                        increased financial accountability. If you wish to learn more, please refer 
+                        to our Terms of Service. 
+                    </span>
+                </div>
+            </div>
+            <div id="question">
+                <div class="quest">
+                    <span> What type of coin deposits does Cexalp support? </span>
+                </div>
+                <div class="resp">
+                    <span>
+                        We're constantly working on expanding the types of coin deposits we accept to better 
+                        suit your needs. Here are the types of coin deposits we currently support: 
+                        BTC ETH XRP EOS USDT DOGE DOT LTC XLM Note: Each coin must be based and have their 
+                        transaction hash (TXID) validated on their respective standard blockchains. Depositing 
+                        a coin type via a blockchain not listed above may result in the permanent 
+                        loss of your coin. 
+                    </span>
+                </div>
+            </div>
+            <div id="question">
+                <div class="quest">
+                    <span> I don't see my deposit in my account. Why? </span>
+                </div>
+                <div class="resp">
+                    <span>
+                        There might be a few reasons for the delay. Here are the major reasons for the respective 
+                        coins: BTC — Unconfirmed transactions on the blockchain (at least 3 confirmation is needed). 
+                        ETH — Unconfirmed transactions on the blockchain (at least 30 confirmations are needed), 
+                        or it could be a Smart Contract transaction that Cexalp does not currently support. XRP or 
+                        EOS — Invalid or missing tag/memo when the deposit was made. USDT — Unconfirmed transaction 
+                        on the blockchain (1 or 30 or 100 confirmations are needed depending if the deposit was an 
+                        Omni, ERC-20, or TRC-20 transfer). 
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        function myFunc(event) {
+            navigator.clipboard.writeText(document.getElementById("show_address").value)
+            event.currentTarget.innerHTML = `
+                Copied Successfully 
+                <svg fill="#0000ff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                width="40px" height="40px" viewBox="0 0 335.765 335.765" xml:space="preserve">
+                    <g><g>
+                        <polygon points="311.757,41.803 107.573,245.96 23.986,162.364 0,186.393 107.573,293.962 335.765,65.795 		"/>
+                    </g></g>
+                </svg>
+            `;
+        }
+
+        const table = document.getElementById('select_coins');
+        list = {
+            "BTC": "Bitcoin", 
+            "ETH": "Ethereum",
+            "LTC": "Litecoin", 
+            "USDT": "Tether",
+            "TRX": "Tron", 
+            "USDC": "USD Coin",
+            "BCH": "Bitcoin Cash", 
+            "DOGE": "Dogecoin",
+            "XMR": "Monero", 
+            "XLM": "Stellar",
+            "XTZ": "Tezos", 
+            "EOS": "EOS",
+            "SHIB": "SHIBA INU", 
+            "LINK": "Chainlink",
+            "ETC": "Ethereum Classic", 
+            "XRP": "Ripple",
+            "ADA": "Cardano", 
+            "DASH": "Dash",
+            "ZEC": "Zcash", 
+            "SOL": "SOL",
+            "LUNA": "LUNA", 
+            "APE": "APE",
+            "DOT": "DOT", 
+            "MATIC": "MATIC",
+            "NEAR": "NEAR", 
+            "TWT": "TWT",
+            "RVN": "RVN", 
+            "WOO": "WOO",
+            "GAL": "GAL", 
+            "GNO": "GNO",
+            "ASTR": "ASTR", 
+            "NEXO": "NEXO",
+            "LOKA": "LOKA", 
+            "FIL": "FIL",
+            "OCEAN": "OCEAN", 
+            "COMP": "COMP",
+            "TOMO": "TOMO", 
+            "KEY": "KEY",
+            "VITE": "VITE", 
+            "BAT": "BAT",
+            "GALA": "GALA", 
+            "RAD": "RAD",
+            "ANKR": "ANKR", 
+            "CFX": "CFX",
+            "CELO": "CELO", 
+            "IOTX": "IOTX",
+            "CRV": "CRV", 
+            "MITH": "MITH",
+            "CELR": "CELR", 
+            "OXT": "OXT",
+            "FIO": "FIO", 
+            "SCRT": "SCRT",
+            "AUDIO": "AUDIO", 
+            "FLM": "FLM",
+            "MDX": "MDX", 
+            "QTUM": "QTUM",
+            "BNT": "BNT",
+            "XVS": "XVS",
+            "BICO": "BICO", 
+            "UMA": "UMA",
+            "AKRO": "AKRO",
+            "LSK": "LSK",
+            "DOCK": "DOCK", 
+            "REP": "REP",
+            "BEAM": "BEAM", 
+            "VOXEL": "VOXEL",
+            "MANA": "MANA", 
+            "RARE": "RARE",
+            "ADX": "ADX", 
+            "ONT": "ONT",
+            "SAND": "SAND", 
+            "COCOS": "COCOS",
+            "ALICE": "ALICE",
+            "MTL": "MTL", 
+            "WING": "WING",
+            "BAKE": "BAKE", 
+            "STRAX": "STRAX",
+            "PERP": "PERP", 
+            "EPX": "EPX",
+            "YFI": "YFI", 
+            "NMR": "NMR",
+            "BOND": "BOND",
+            "JST": "JST",
+            "POWR": "POWR", 
+            "FIDA": "FIDA",
+            "PAXG": "PAXG", 
+            "CHZ": "CHZ"
+        }
+
+        const networks_table = document.getElementById('select_networks');
+        const networks_list = { 
+                "BTC"     : "BTC",
+                "ETH"     : "ETH",
+                "LTC"     : "LTC",
+                "TRX"     : "TRX",
+                "BCH"     : "BCH",
+                "DOGE"    : "DOGE",
+                "XMR"     : "XMR",
+                "XLM"     : "XLM",
+                "XTZ"     : "XTZ",
+                "EOS"     : "EOS",
+                "ETC"     : "ETC",
+                "XRP"     : "XRP",
+                "ADA"     : "ADA",
+                "DASH"    : "DASH",
+                "ZEC"     : "ZEC",
+                "SOL"     : "SOL",
+                "BNB"     : "BEP20",
+                "SHIB"    : "BEP20",
+                "LINK"    : "ERC20",
+                "USDC"    : "TRC20",
+                "USDT"    : [
+                    "ERC20",
+                    "TRC20",
+                    "BEP20"
+                ],
+            }
+
+
+        const left_select_btn = document.getElementById('left_select_btn');
+        let params = new URLSearchParams(document.location.search);
+        console.log(params)
+
+        let coin;
+        let low_coin;
+        let net;
+        if (params.has("currency")) {
+            coin = params.get("currency");
+            low_coin = coin.toLowerCase();
+        } else {
+            coin = "BTC";
+        }
+        for (const item in networks_list) {
+            if (coin == item) {
+                if (networks_list[item] instanceof Array) {
+                    net = networks_list[item][0]
+                } else {
+                    net = networks_list[item]
+                }
+            }
+        }
+
+        if (params.has("currency")) {
+            coin_left_select_btn.innerHTML += `
+                <img src="../static/images/coins/${low_coin}.svg" width="25px">
+                <span>${list[coin]} ${coin}</span>
+            `
+            network_left_select_btn.innerHTML += `
+                <span 
+                    id="network_left_select_btn_span" 
+                    data-selected-net="${net}">
+                    ${list[coin]} (${net})
+                </span>
+            `
+        } else {
+            coin_left_select_btn.innerHTML += `
+                <img src="../static/images/coins/btc.svg" width="25px">
+                <span>Bitcoin BTC</span>
+            `
+            network_left_select_btn.innerHTML += `
+                <span 
+                    id="network_left_select_btn_span" 
+                    data-selected-net="${net}">
+                    Bitcoin (BTC)
+                </span>
+            `
+        }
+
+        for (const item in networks_list) {
+            if (coin == item) {
+                if (networks_list[item] instanceof Array) {
+                    for (const x of networks_list[item]) {
+                        networks_table.innerHTML += `
+                            <div class="select_net" data-net="${x}">
+                                <div>
+                                    <span>${list[coin]} (${x})</span>
+                                </div>
+                            </div>
+                        `
+                    }
+                } else {
+                    networks_table.innerHTML += `
+                        <div class="select_net" data-net="${networks_list[item]}">
+                            <div>
+                                <span>${list[coin]} (${networks_list[item]})</span>
+                            </div>
+                        </div>
+                    `
+                }
+            }
+        }
+
+        for (const Lcoin in list) {
+            if (Object.hasOwnProperty.call(list, Lcoin)) {
+                const name = list[Lcoin];
+                let low_Lcoin = Lcoin.toLowerCase();
+                table.innerHTML += `
+                    <div class="select_coin">
+                        <a href="/profile/deposit?currency=${Lcoin}">
+                            <img src="../static/images/coins/${low_Lcoin}.svg" width="25px">
+                            <span>${name} ${Lcoin}</span>
+                        </a>
+                    </div>
+                `
+            }
+        }
+
+        function toggle_select_networks() {
+            var el = document.getElementById("select_networks");
+            el.classList.toggle("select_networks_display");
+        } 
+
+        function toggle_select_coins() {
+            var element = document.getElementById("select_coins");
+            element.classList.toggle("select_coins_display");
+        } 
+
+        const select_nets = document.querySelectorAll('.select_net');
+
+        select_nets.forEach(el => {
+            el.addEventListener('click', () => {
+                network_left_select_btn.innerHTML = `
+                    <span 
+                        id="network_left_select_btn_span"
+                        data-selected-net="${el.getAttribute("data-net")}">
+                        ${el.innerText}
+                    </span>
+                `
+                document.getElementById("select_networks").classList.toggle("select_networks_display");
+            });
+        });
+    </script>
+    <script type="module" src="{{ url_for('static', filename='js/deposit.js') }}"></script>
+{% endblock %}

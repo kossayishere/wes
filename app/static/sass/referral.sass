@@ -1,0 +1,137 @@
+$big-screen: 1500px
+$medium-screen: 1070px
+$small-screen: 750px
+$phone-screen: 500px
+    
+#content_wrapper
+    .top_content
+        display: flex
+        justify-content: space-around
+        max-height: 600px 
+        width: 100%
+        background-image: url(../images/bg.webp)
+        background-repeat: no-repeat
+        background-position: 50%
+        background-size: cover
+        position: relative
+        overflow: hidden
+        @media (max-width: $small-screen)
+            flex-direction: column
+            align-items: center
+            max-height: fit-content
+        .left
+            display: flex
+            flex-direction: column
+            width: 40%
+            @media (max-width: $small-screen)
+                width: 90%
+            .inner_left
+                color: white
+                margin: 100px 0
+                @media (max-width: $small-screen)
+                    margin: 50px 0
+                #ref_title
+                    font-size: 55px
+                    font-weight: bold
+                    @media (max-width: $small-screen)
+                        font-size: 44px
+                        text-align: center
+                #ref_other_title
+                    margin-top: 30px
+                    font-size: 25px
+                    @media (max-width: $small-screen)
+                        font-size: 18px
+        .right
+            width: 30%
+            @media (max-width: $small-screen)
+                width: 100%
+            .inner_right
+                width: 100%
+                margin: 60px 0 
+                @media (max-width: $small-screen)
+                    margin: 0 
+
+    .links_content
+        display: flex
+        justify-content: space-around
+        background-color: #31234d
+        .inner_links
+            display: flex
+            margin-top: 50px
+            width: 90%
+            background-color: #4A3571
+            border: 1px solid #31234d
+            text-align: center
+            border-radius: 5px
+            padding: 20px
+            color: white
+            @media (max-width: $small-screen)
+                flex-direction: column
+            .title
+                font-size: 20px
+                font-weight: bold
+                margin-right: 30px
+                @media (max-width: $small-screen)
+                    margin-right: 0
+            .link
+                font-size: 18px
+
+    .bottom_content
+        display: flex
+        justify-content: center
+        width: 100%
+        background-color: #31234d
+        #referrals_table
+            display: flex
+            flex-direction: column
+            width: 90%
+            justify-content: center
+            margin: 50px 0
+            #titles
+                display: flex
+                width: 100%
+                background-color: #4A3571
+                border-bottom: 1px solid #31234d
+                #th_Status
+                    @media (max-width: $small-screen)
+                        display: none
+                div
+                    width: 33.33%
+                    color: white
+                    padding: 30px
+                    text-align: center
+                    @media (max-width: $small-screen)
+                        width: 50%
+
+            #inner_table
+                width: 100%
+                min-height: 400px
+                position: relative
+                .table_row
+                    display: flex
+                    width: 100%
+                    background-color: #4A3571
+                    border-bottom: 1px solid #31234d
+                    .th_Status
+                        @media (max-width: $small-screen)
+                            display: none
+                    div
+                        width: 33.33%
+                        color: white
+                        padding: 30px
+                        text-align: center
+                        @media (max-width: $small-screen)
+                            width: 50%
+                svg
+                    position: absolute
+                    top: calc( 50% - 60px )
+                    left: calc( 50% - 60px )
+                span
+                    position: absolute
+                    top: calc( 50% + 60px )
+                    left: calc( 50% - 80px )
+                    font-size: 14px
+                    color: gray
+
+                    
+

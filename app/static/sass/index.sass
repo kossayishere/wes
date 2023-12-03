@@ -1,0 +1,1235 @@
+$very-blue: #171430
+$middle-blue: #1F1B3E
+$darker-blue: #092440
+$dark-blue: #2d3e50
+$blueish: #383360
+$blue: #3a5068
+$light-blue: #86bbf3
+
+$think-blue: #221C4D
+$dark-lila: #4E4DA6
+$mild-lila:	#847AE7
+$lila: #a99cf2
+
+$gray: #8C8B90
+
+$fs-10: 10px
+$fs-11: 11px
+$fs-12: 12px
+$fs-13: 13px
+$fs-14: 14px
+$fs-15: 15px
+$fs-16: 16px
+$fs-17: 17px
+$fs-18: 18px
+$fs-19: 19px
+$fs-20: 20px
+$fs-24: 24px
+$fs-28: 28px
+$fs-30: 30px
+$fs-32: 32px
+$fs-36: 36px
+$fs-38: 38px
+$fs-42: 42px
+$fs-48: 48px
+$fs-52: 52px
+$fs-63: 63px
+
+$bigger-screen: 1176px
+$big-screen: 950px
+$tablet-screen: 950px
+$small-screen: 750px
+$phone-screen: 500px
+
+@keyframes scrollCoins
+	0%
+		transform: translateX(0)
+
+	100%
+		transform: translateX(var(--x))
+
+#index_content, #content_wrapper
+	position: relative
+	overflow: hidden
+	#header
+		width: 100%
+		height: auto
+		background: linear-gradient(259.03deg, #8B49F7 6.36%, #83E2D7 41.96%, #8395F0 71.23%, #FFA06B 100%)
+		position: relative
+
+		#header_upper
+			@media (max-width: $big-screen)
+				display: none
+				position: absolute
+				width: 100%
+				height: auto
+				background-color: #00000000
+			display: none
+			.header_upper_wrapper
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				width: 100%
+				margin-top: 70px				
+				.left
+					.links
+						ul
+							list-style: none
+							display: flex
+							flex-direction: column
+							a
+								text-decoration: none
+								width: 100%
+								text-align: center
+								.link
+									color: white
+									padding: 10px
+									margin: 10px
+									margin-radius: 10px
+									list-style: none
+									font-size: $fs-17
+									font-weight: bold
+									&:hover
+										color: $dark-blue
+				.right
+					.account
+						ul
+							margin: 12px 20px 0 0
+							display: flex
+							a
+								text-decoration: none
+								.link, .signup
+									color: white
+									padding: 10px 20px
+									list-style: none
+									font-size: $fs-15
+									font-weight: bold
+								.link
+									&:hover
+										color: $dark-blue
+								.signup
+									background-color: $dark-blue
+									border-radius: 10px
+									&:hover
+										background-color: $blue
+			
+		.up
+			width: 100%
+			height: 90px
+			display: flex
+			justify-content: space-between
+			z-index: 20
+			.left
+				display: flex
+				width: 250px
+				z-index: 10
+				.logo
+					font-size: $fs-24
+					font-weight: bold
+					color: white
+					display: flex
+					img
+						margin: 15px 10px 10px 50px 
+					span
+						margin-top: 30px
+
+			.center
+				@media (max-width: $big-screen)
+					display: none
+				.links
+					ul
+						margin: 15px
+						display: flex
+						a
+							text-decoration: none
+							.link
+								color: white
+								padding: 10px
+								margin: 10px
+								margin-radius: 10px
+								list-style: none
+								font-size: $fs-17
+								font-weight: bold
+								&:hover
+									color: $dark-blue
+
+			.right
+				display: flex
+				width: 250px
+				@media (max-width: $big-screen)
+					display: none
+				.account
+					ul
+						margin-top: 25px
+						display: flex
+						a
+							text-decoration: none
+							.link, .signup
+								color: white
+								padding: 10px 20px
+								list-style: none
+								font-size: $fs-15
+								font-weight: bold
+							.link
+								&:hover
+									color: $dark-blue
+							.signup
+								background-color: $dark-blue
+								border-radius: 10px
+								&:hover
+									background-color: $blue
+
+			#header_ham_btn
+				display: flex
+				flex-direction: column
+				z-index: 20
+				@media (min-width: $big-screen)
+					display: none
+				span
+					width: 50px
+					height: 10px
+					background: black
+
+		.middle
+			margin: 100px 0 0 0
+			display: flex
+			justify-content: space-between
+			z-index: 10
+			@media (max-width: $big-screen)
+				flex-direction: column
+				align-items: center
+				margin: 0
+			.left
+				.what
+					display: flex
+					flex-direction: column
+					margin-left: 50px
+					@media (max-width: $big-screen)
+						margin-left: 0
+					.title
+						@media (max-width: $big-screen)
+							font-size: $fs-38
+							text-align: center
+						font-size: $fs-63
+						font-weight: bold
+						line-height: 1.3
+						span
+							color: white
+							background-color:#171430
+					.text
+						margin-top: 20px
+						color: white
+						font-size: $fs-20
+						display: flex
+						@media (max-width: $big-screen)
+							display: none
+					.text_phone
+						display: none
+						@media (max-width: $big-screen)
+							display: flex
+							text-align: center
+							margin: 20px 
+							color: white
+							font-size: $fs-20
+					.links
+						width: 100%
+						display: flex
+						justify-content: center
+						ul
+							margin: 70px 0
+							display: flex
+							@media (max-width: $big-screen)
+								margin: 0 0 20px 0
+							a
+								text-decoration: none
+								.link, .trading_link
+									margin: 10px 0
+									list-style: none
+									font-size: $fs-17
+									font-weight: bold
+								.trading_link
+									color: white
+									background-color: $darker-blue
+									border-radius: 10px
+									position: relative
+									padding: 20px 50px 20px 30px
+									&:hover
+										background-color: $blueish
+									&::after
+										content: ""
+										position: absolute
+										right: 30px
+										top: 50%
+										transform: translateY(-50%)
+										width: 11px
+										height: 11px
+										background-image: url("../images/Arrow-one.svg")
+										background-repeat: no-repeat
+										background-size: cover
+								.link
+									padding: 20px
+									color: $dark-blue
+									position: relative
+									&::after
+										content: ""
+										position: absolute
+										right: -5px
+										top: 40%
+										width: 13px
+										height: 11px
+										background-image: url("../images/Arrow-two.svg")
+										background-repeat: no-repeat
+										background-size: cover
+			.right
+				margin: 50px 100px 0 0
+				@media (max-width: $big-screen)
+					margin: 0
+				z-index: 20
+				.image_block
+					.image
+						position: relative
+						img
+							position: relative
+						.image-shadow
+							position: absolute
+							top: 9%
+							left: 5%
+							right: 5%
+							height: 95%
+							background-size: auto
+							background-position: center bottom
+							background-repeat: no-repeat
+							-webkit-filter: blur(25px)
+							filter: blur(25px)
+
+	#triangle
+		position: absolute
+		right: -100px
+		width: 120%
+		height: 400px
+		top: 800px
+		background-color: $very-blue
+		transform: rotate(-15deg)
+		@media (max-width: $big-screen)
+			right: -70px
+			width: 150%
+			height: 300px
+			top: 1100px
+
+	#coins
+		height: auto
+		width: 100%
+		background-color: $very-blue
+		z-index: 30
+		.Swipy
+			height: 300px
+			.swiper
+				width: 100%
+				height: 100%
+				.swiper-wrapper
+					display: flex
+					width: 100%
+					.swiper-slide
+						font-size: 30px
+						color: #fff
+						display: flex
+						justify-content: center
+						text-align: center
+						.inner_slide
+							display: block
+							height: 300px
+							background: linear-gradient(0deg, #1A1738 0%, #21253A 100%)
+							border-radius: 20px
+							.top
+								display: flex
+								justify-content: center
+								padding-top: 20px
+								padding-bottom: 10px
+								.coin_name
+									display: flex
+									font-size: $fs-20
+									margin: 9px 0 0 10px
+							.middel
+								display: flex
+								flex-direction: column
+								.coin_price
+									font-size: $fs-28
+								.coin_change
+									margin-top: 10px
+									.goes_down
+										background-color: #ff373713
+										border-radius: 20px
+										font-size: $fs-13
+										color: #ff3737
+										padding: 10px 20px
+									.goes_up
+										background-color: #25ff3013
+										border-radius: 20px
+										font-size: $fs-13
+										color: #208817
+										padding: 10px 20px
+								.graph
+									margin: 10px 0
+									width: 100%
+									height: 70px
+								.time
+									span
+										font-size: $fs-12
+										color: #b8b8b849
+
+				.swiper_prev
+					background-image: url("../images/arrow-prev.svg")
+					left: 20px
+				.swiper_next
+					background-image: url("../images/arrow-next.svg")
+					right: 20px
+				.swiper_prev, .swiper_next
+					width: 45px
+					height: 45px
+					background-repeat: no-repeat
+					background-size: cover
+					position: absolute
+					z-index: 20
+					top: 50%
+					transform: translateY(-50%)
+					cursor: pointer
+					@media (max-width: $big-screen)
+						display: none
+
+		.coins_table
+			margin-top: 100px
+			width: 100%
+			background-color: $very-blue
+			display: flex
+			flex-direction: column
+			align-items: center
+			.headline
+				color: white
+				width: auto
+				display: flex
+				flex-direction: column
+				.title
+					font-size: $fs-48
+					font-weight: bold
+					@media (max-width: $big-screen)
+						font-size: $fs-32
+						text-align: center
+						margin: 0 20px
+				.under_title
+					color: $gray
+					margin-top: 10px
+					align-self: center
+					@media (max-width: $big-screen)
+						text-align: center
+						margin: 10px
+			.table
+				display: flex
+				flex-direction: column
+				width: 80%
+				margin: 50px
+				color: white
+				@media (max-width: $big-screen)
+					overflow: scroll
+					margin: 50px 5px
+					width: 95%
+				.row
+					display: flex
+					margin: 5px
+					padding: 20px 15px 15px 15px
+					border-radius: 10px
+					align-items: center
+					@media (max-width: $big-screen)
+						width: 260%
+						padding: 0
+						margin: 0
+					@media (max-width: $phone-screen)
+						width: 100%
+						padding: 0
+						margin: 0
+					&:hover
+						background-color: $middle-blue
+					.number
+						@media (max-width: $phone-screen)
+							display: none
+						color: $gray
+						width: 5%
+						display: flex
+						span
+							align-self: center
+					.logo
+						@media (max-width: $phone-screen)
+							width: 15%
+					.name_sign
+						width: 30%
+						padding: 20px
+						line-height: 2.7
+						@media (max-width: $phone-screen)
+							width: 55%
+						.sign
+							@media (max-width: $phone-screen)
+								margin-left: 5px
+							margin-left: 20px
+							color: $gray
+					.value, .change
+						width: 20%
+						line-height: 2.7
+					.value
+						@media (max-width: $phone-screen)
+							text-align: right
+							width: 30%
+					.change
+						@media (max-width: $phone-screen)
+							display: none
+					.curve
+						@media (max-width: $phone-screen)
+							display: none
+						width: 20%
+					.trade_button
+						@media (max-width: $phone-screen)
+							display: none
+						width: 10%
+						a
+							color: white
+							margin: 0 10px 10px 10px
+							padding: 10px 20px
+							border: 1px solid $dark-lila
+							border-radius: 10px
+							background-color: $very-blue
+							&:hover
+								background-color: $dark-lila
+
+		.stats
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			justify-content: space-evenly
+			background-image: url("../images/bg.png")
+			background-repeat: no-repeat
+			background-size: cover
+			background-position: center
+			padding: 20px
+			color: white
+			@media (max-width: $big-screen)
+				background-position: left
+				margin: 0 10px
+			.inner_stat
+				display: flex
+				flex-direction: column
+				margin: 5px
+				@media (max-width: $big-screen)
+					margin: 20px 5px 
+				align-items: center
+				.number
+					font-size: $fs-48
+					font-weight: bold
+					@media (max-width: $big-screen)
+						font-size: $fs-42
+
+				.description
+					font-size: $fs-18
+					color: $gray
+
+		.product_article
+			display: flex
+			flex-direction: row
+			justify-items: center
+			width: 100%
+			background-color: $very-blue
+			.product_article_wrapper
+				display: flex
+				width: 95%
+				margin: auto
+				justify-content: space-around
+				@media (max-width: $big-screen)
+					flex-direction: column
+					align-items: center
+				.left
+					img
+						width: 696px
+						height: 879px
+						@media (max-width: $bigger-screen)
+							width: 600px
+							height: 715px
+						@media (max-width: $big-screen)
+							width: 503px
+							height: 600px
+				.right
+					display: flex
+					flex-direction: column
+					align-items: center
+					margin: 100px 0
+					max-width: 562px
+					@media (max-width: $big-screen)
+						max-width: 90%
+						margin: 0
+					.title
+						color: white
+						font-size: $fs-48
+						font-weight: bold
+						line-height: 1.3
+						@media (max-width: $big-screen)
+							text-align: center
+							font-size: $fs-38
+							line-height: 1.5
+					.under_title
+						margin: 10px 0
+						color: $gray
+						font-size: $fs-20
+						@media (max-width: $big-screen)
+							text-align: center
+					.articles_one
+						margin-top: 40px 
+					.articles_two
+						margin-top: 25px 
+					.articles
+						display: flex
+						@media (max-width: $big-screen)
+							flex-wrap: wrap 
+						&:first-of-type
+							margin-top: 50px 
+						.article
+							display: flex
+							width: 47%
+							@media (max-width: $big-screen)
+								width: 100%
+								margin-right: 0
+							color: $gray
+							margin-right: 20px 
+							.logo
+								margin-left: -10px
+								img
+									width: 72px
+									height: 72px
+							.description
+								margin: 10px
+								font-size: $fs-18
+								line-height: 1.4
+								@media (max-width: $big-screen)
+									font-size: $fs-16
+		.bond
+			margin-top: 40px
+			width: 100%
+			background-color: $very-blue
+			display: flex
+			flex-direction: column
+			align-items: center
+			.headline
+				color: white
+				width: auto
+				display: flex
+				flex-direction: column
+				@media (max-width: $big-screen)
+					width: 100%
+					text-align: center
+				.title
+					font-size: $fs-36
+					font-weight: bold
+					@media (max-width: $big-screen)
+						margin: 0 15px
+				.under_title
+					color: $gray
+					margin-top: 10px
+					align-self: center
+					font-size: $fs-18
+
+			.coins_track
+				display: flex
+				width: 100%
+				margin: 40px
+			#track_one
+				animation: scrollCoins 40s linear infinite
+				.image
+					width: 2894px
+					height: 140px
+					background-image: url("../images/coins.webp")
+					background-repeat: no-repeat
+					background-size: cover
+		.services
+			margin-top: 40px
+			width: 100%
+			background-color: $very-blue
+			display: flex
+			flex-direction: column
+			align-items: center
+			.headline
+				color: white
+				width: auto
+				display: flex
+				flex-direction: column
+				margin-bottom: 30px
+				.title
+					font-size: $fs-48
+					font-weight: bold
+					text-align: center
+				.under_title
+					text-align: center
+					color: $gray
+					margin-top: 10px
+					align-self: center
+					font-size: $fs-18
+			.cards
+				display: flex
+				width: 90%
+				justify-content: space-evenly
+				flex-wrap: wrap 
+				.card
+					border-radius: 30px
+					padding: 20px 50px 60px 50px
+					position: relative
+					width: 400px
+					margin: 20px 5px 0 5px
+					&::after
+						font-weight: 800
+						font-size: 221.113px
+						line-height: 279px
+						text-align: center
+						background: linear-gradient(180deg, #1D1A3C 0%, #1d1a3c36 100%)
+						background-clip: border-box
+						-webkit-background-clip: text
+						-webkit-text-fill-color: transparent
+						background-clip: text
+						text-fill-color: transparent
+						z-index: 5
+					&::before
+						content: ""
+						position: absolute
+						inset: 0
+						border-radius: 31.4751px
+						padding: 3px
+						background: radial-gradient(81.43% 127.97% at 50% 0%, #F6FB80 0%, #F9BCFE 18.03%, #9AD9EC 38.08%, #5FE9B9 58.14%, #DCC987 77.46%, #CFA5E9 98.25%)
+						-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+						mask-composite: add, add
+						-webkit-mask-composite: xor
+						mask-composite: exclude
+				.card_1::after
+					content: "1"
+					position: absolute
+					top: -13px
+					right: 40px
+				.card_2::after
+					content: "2"
+					position: absolute
+					top: -13px
+					right: 40px
+				.card_3::after
+					content: "3"
+					position: absolute
+					top: -13px
+					right: 40px
+				.card .logo
+						margin-left: -15px
+						img
+							height: 120px
+				.card .title
+						span
+							font-size: $fs-28
+							color: $mild-lila
+							font-weight: bold
+				.card .description
+						margin-top: 10px
+						span
+							font-size: $fs-18
+							color: $gray
+
+		.wallet_1
+			background-color: $very-blue
+			@media (max-width: $big-screen)
+				margin-bottom: 0
+			.wellet_wrapper_1
+				display: flex
+				justify-content: space-between
+				max-width: 1299.23px
+				margin: 0 auto
+				padding: 0 15px
+				position: relative
+				@media (max-width: $big-screen)
+					flex-direction: column
+					margin: 100px auto 0 auto
+				.left
+					max-width: 474px
+					padding: 157px 0 0 31px
+					z-index: 10
+					@media (max-width: $big-screen)
+						max-width: 650px
+						margin: 0 auto
+						display: flex
+						flex-direction: column
+						align-items: center
+						text-align: center
+						padding: 0
+					.over_title
+						span
+							font-size: $fs-20
+							color: $mild-lila
+					.title
+						margin-top: 20px 
+						span
+							font-size: $fs-36
+							font-weight: bold
+							color: white
+
+					.description
+						width: 400px
+						margin: 40px 0 
+						@media (max-width: $phone-screen)
+							width: 100%
+						span
+							color: $gray
+							font-size: $fs-18
+							line-height: 1.6
+					.to_wallet
+						margin-top: 70px
+						@media (max-width: $big-screen)
+							margin-top: 0
+						a
+							padding: 15px 60px 15px 40px
+							color: $mild-lila	
+							font-size: $fs-15
+							font-weight: bold				
+							background: $very-blue
+							border: 2px solid $mild-lila
+							border-radius: 10px
+							cursor: pointer
+							position: relative
+							&:hover
+								background: $think-blue
+							svg
+								position: absolute
+								top: 23px
+								right: 45px
+								transform: translateY(-50%)
+				img
+					position: absolute
+					right: -209px
+					top: -54px
+					width: 992.16px
+					z-index: 1
+					@media (max-width: $big-screen)
+						margin: -50px auto 0
+						position: static
+						width: 860px
+					@media (max-width: $phone-screen)
+						margin: 0 0 0 -100px
+						position: static
+						width: 560px
+
+		.wallet_2
+			background-color: $very-blue
+			margin-bottom: 150px
+			@media (max-width: $big-screen)
+				margin-bottom: 0
+			.wellet_wrapper_2
+				display: flex
+				flex-direction: row-reverse
+				justify-content: space-between
+				max-width: 1299.23px
+				margin: 100px auto 0 auto
+				padding: 0 15px
+				position: relative
+				@media (max-width: $big-screen)
+					flex-direction: column
+					margin-top: -80px
+				.right
+					max-width: 537px
+					z-index: 10
+					@media (max-width: $big-screen)
+						max-width: 650px
+						margin: 0 auto
+						display: flex
+						flex-direction: column
+						align-items: center
+						text-align: center
+						padding: 0
+					.over_title
+						span
+							font-size: $fs-20
+							color: $mild-lila
+					.title
+						margin-top: 20px 
+						span
+							font-size: $fs-36
+							font-weight: bold
+							color: white
+					.description
+						margin: 40px 0 
+						span
+							color: $gray
+							font-size: $fs-18
+							line-height: 1.6
+					.to_wallet
+						margin-top: 70px
+						@media (max-width: $big-screen)
+							margin-top: 0
+						a
+							padding: 15px 60px 15px 40px
+							color: $mild-lila	
+							font-size: $fs-15
+							font-weight: bold				
+							background: $very-blue
+							border: 2px solid $mild-lila
+							border-radius: 10px
+							cursor: pointer
+							position: relative
+							&:hover
+								background: $think-blue
+							svg
+								position: absolute
+								top: 23px
+								right: 45px
+								transform: translateY(-50%)
+				img
+					position: absolute
+					top: -160px
+					left: -128px
+					width: 880px
+					z-index: 1
+					@media (max-width: $big-screen)
+						margin: -100px auto 0
+						position: static
+						top: -160px
+					@media (max-width: $phone-screen)
+						margin: 0 0 0 -105px
+						position: static
+						width: 560px
+
+	
+		.news
+			display: flex
+			width: 100%
+			justify-content: space-evenly
+			flex-wrap: wrap
+			background-color: #0000002a
+			padding: 20px 0 
+			@media (max-width: $phone-screen)
+				width: calc( 100% - 20px )
+				flex-direction: column
+				align-items: center
+				margin: 0 10px
+				padding: 0 
+			.logo
+				width: 250px
+				display: flex
+				justify-content: center
+				padding: 20px 0
+			.logo_ft
+				@media (max-width: $phone-screen)
+					padding: 20px 0
+				width: 100px
+				display: flex
+				justify-content: center
+
+		.calc
+			margin-top: 120px
+			margin-bottom: 150px
+			width: 100%
+			background-color: $very-blue
+			display: flex
+			flex-direction: column
+			align-items: center
+			padding: 0 15px
+			@media (max-width: $phone-screen)
+				margin-top: 100px
+				margin-bottom: 50px
+			.headline
+				color: white
+				width: auto
+				display: flex
+				flex-direction: column
+				.title
+					font-size: $fs-38
+					font-weight: bold
+					align-self: center
+					text-align: center
+				.under_title
+					color: $gray
+					margin-top: 10px
+					font-size: $fs-18
+					text-align: center
+			.inner_calc *
+				position: relative
+				z-index: 10
+			.inner_calc
+				display: flex
+				flex-direction: column
+				background: linear-gradient(180deg, #171430 0%, #090718 100%)
+				border-radius: 31.4751px
+				position: relative
+				padding: 54px 113px 59px 113px
+				width: fit-content
+				margin: 21px auto auto auto
+				min-width: 859px
+				z-index: 10
+				@media (max-width: $tablet-screen)
+					min-width: 100%
+					padding: 25px
+
+				&::before
+					content: ""
+					position: absolute
+					inset: 0
+					border-radius: 31.4751px
+					padding: 3px
+					background: radial-gradient(76.28% 119.86% at 50% 0%, #F6FB80 0%, #F9BCFE 18.03%, #5FE9B9 42.71%, #FB4AFF 66.15%, #26BEFF 83.33%, #FCFF7D 100%)
+					-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+					mask-composite: add, add
+					-webkit-mask-composite: xor
+					mask-composite: exclude
+					
+				.amount
+					width: 600px
+					display: flex
+					justify-content: space-evenly
+					z-index: 10
+					@media (max-width: $tablet-screen)
+						flex-direction: column	
+						align-items: center
+						width: 100%
+					.title
+						margin-top: 10px
+						span
+							font-size: $fs-28
+							color: white
+							font-weight: bold
+					.input_wrapper
+						display: flex
+						background: #221C4D
+						border: 2px solid #6F73CF
+						border-radius: 10px
+						padding: 8px 0 8px 0
+						max-width: 158px
+						min-width: 158px
+						position: relative
+						font-weight: 700
+						font-size: 19px
+						line-height: 175%
+						color: #6F73CF
+						margin-left: 70px
+						@media (max-width: $tablet-screen)
+							margin-top: 20px
+							margin-left: 0
+						#calc_amount
+							background: #221C4D
+							border: none
+							outline: none
+							padding: 0 0 0 34px
+							max-width: 130px
+							-moz-appearance: textfield
+							color: white
+							font-size: $fs-19
+							line-height: 1.15
+				.range
+					margin-top: 30px
+  					margin-bottom: 29px
+					@media (max-width: $tablet-screen)
+						display: flex
+						justify-content: center
+						padding: 0 15px
+					#calc_range
+						-webkit-appearance: none
+						width: 98%
+						height: 11px
+						background: #ffffff21
+						border-radius: 50px
+						background-size: 0% 100%
+						background-repeat: no-repeat
+						@media (max-width: $tablet-screen)
+							max-width: 612px
+							margin: 0 auto
+					#calc_range::-webkit-slider-thumb
+						height: 22px
+						width: 40px
+						border-radius: 30px
+						cursor: pointer
+					#calc_range::-moz-range-thumb 
+						border-radius: 30px
+						height: 22px
+						width: 40px
+						cursor: pointer
+					#calc_range::-moz-range-progress
+						background-image: linear-gradient(90deg, #6F73CF 0%, #6F73CF 100%)
+						height: 11px
+						width: 40px
+						border-top-left-radius: 30px
+						border-bottom-left-radius: 30px
+					#calc_range::-webkit-slider-runnable-track
+						height: 11px
+						width: 40px
+						border-top-left-radius: 30px
+						border-bottom-left-radius: 30px
+						background-image: linear-gradient(90deg, #6F73CF 0%, #6F73CF 100%)
+				.period
+					display: flex
+					flex-direction: column
+					text-align: center
+					.title
+						margin-top: 50px
+						span
+							font-size: $fs-28
+							color: white
+							font-weight: bold
+					.periods_btns
+						display: flex
+						flex-direction: row
+						flex-wrap: wrap
+						justify-content: center
+						column-gap: 19px
+						margin-top: 30px
+						.calc_btn
+							font-size: $fs-19
+							border: 2px solid #6F73CF
+							border-radius: 10px
+							background: none
+							cursor: pointer
+							padding: 10px 20px
+							margin: 5px 0
+							min-width: 137px
+							color: white
+						.calc_btn.active
+								background: #6F73CF
+				.calc_results
+					display: flex
+					flex-direction: row
+					flex-wrap: wrap
+					color: white
+					justify-content: center
+					@media (max-width: $phone-screen)
+						column-gap: 25px
+						margin-top: 20px
+					column-gap: 70px
+					margin-top: 50px
+					.cal_result
+						display: flex
+						flex-direction: column
+						text-align: center
+						@media (max-width: $phone-screen)
+							margin-top: 20px
+						.name
+							span
+								font-size: $fs-20
+						.numberus
+							span
+								font-size: $fs-38
+								font-weight: bold
+
+	#calc_triangle			
+		position: absolute
+		right: -120px
+		width: 150%
+		height: 650px
+		bottom: 150px
+		background-color: black
+		transform: rotate(-15deg)
+		z-index: 5
+		@media (max-width: $phone-screen)
+			right: -100px
+			bottom: 400px
+
+	#footer
+		position: relative
+		height: 500px
+		width: 100%
+		background-color: #121212
+		z-index: 10
+		display: flex
+		flex-direction: column
+		justify-items: center
+		@media (max-width: $bigger-screen)
+			height: fit-content
+		.footer_wrapper
+			width: 80%
+			display: flex
+			justify-content: space-between 
+			margin: 50px auto
+			@media (max-width: $bigger-screen)
+				width: 100%
+				justify-content: center 
+				margin: 20px auto
+			.left
+				.top
+					display: flex
+					flex-direction: column
+					.name
+						display: flex
+						span
+							margin-top: 10px
+							margin-left: 10px
+							font-size: $fs-30
+							font-weight: bold
+							color: white
+					.desc
+						display: flex
+						@media (max-width: $bigger-screen)
+							display: none
+						span
+							margin-top: 30px
+							color: $gray
+							font-size: $fs-14
+				.bottom
+					@media (max-width: $bigger-screen)
+						display: none
+						margin-top: 0
+					display: flex
+					flex-direction: column
+					margin-top: 40px
+					span
+						color: white
+						margin: 10px 0
+						color: $gray
+						font-size: $fs-14
+					.sub_form
+						input
+							font-size: 12px
+							line-height: 14px
+							color: #A8A8A8
+							background: #232323
+							border: 1px solid #373737
+							border-radius: 5px
+							outline: none
+							padding: 8px 10px 8px 11px
+							max-width: 139px
+						#footer_email_sub_btn
+							font-weight: 400
+							font-size: 14px
+							line-height: 16px
+							color: #FFFFFF
+							padding: 7px 18px 7px 19px
+							background: #6544C6
+							border-radius: 5px
+							margin-left: 10px
+							cursor: pointer
+			.right
+				display: flex
+				@media (max-width: $bigger-screen)
+					display: none
+				.col
+					color: white
+					width: 170px
+					.list
+						margin-top: 20px
+						ul
+							list-style: none
+							a
+								display: flex
+								color: $gray
+								text-decoration: none
+								font-size: $fs-14
+								margin-top: 10px
+								&:hover
+									color: white
+		.statement
+			color: white
+			font-size: $fs-10
+			color: $gray
+			display: flex
+			justify-content: center
+			@media (max-width: $bigger-screen)
+				display: none
+			.statement_wrapper
+				border-top: 1px solid white
+				width: 80%
+				padding: 30px
+				text-align: center
+				span
+					.sign
+						font-size: $fs-13
+						color: white
